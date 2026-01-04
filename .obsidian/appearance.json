@@ -2,5 +2,6 @@
   "accentColor": "",
   "cssTheme": "Border",
   "translucency": true,
-  "theme": "system"
+  "theme": "system",
+  "showRibbon": false
 }

@@ -44,5 +44,14 @@
       ],
       "key": "]"
     }
+  ],
+  "homepage:open-homepage": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "H"
+    }
   ]
 }

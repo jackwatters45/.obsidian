@@ -1,0 +1,13 @@
+*
+!Templates/
+!Templates/**
+!.obsidian/
+!.obsidian/**
+
+# Obsidian state
+.obsidian/workspace.json
+.obsidian/graph.json
+
+# Other
+.DS_Store
+!.gitignore

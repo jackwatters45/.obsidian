@@ -1,0 +1,17 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "phone": "number",
+    "met": "date",
+    "last contact": "date",
+    "birthday": "date",
+    "org": "multitext",
+    "language": "multitext",
+    "rating": "number",
+    "finished": "date",
+    "series": "multitext",
+    "created": "date"
+  }
+}

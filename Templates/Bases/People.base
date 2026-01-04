@@ -1,0 +1,34 @@
+filters:
+  and:
+    - '!file.name.contains("Template")'
+    - categories.contains(link("People"))
+formulas:
+  Age: (now() - birthday).years.floor()
+properties:
+  file.name:
+    displayName: Name
+  note.tags:
+    displayName: Tags
+  note.birthday:
+    displayName: Birthday
+views:
+  - type: table
+    name: All people
+    order:
+      - file.name
+      - tags
+      - birthday
+      - categories
+      - created
+      - linkedin
+      - org
+    sort:
+      - property: file.name
+        direction: ASC
+      - property: tags
+        direction: ASC
+      - property: birthday
+        direction: DESC
+    columnSize:
+      note.tags: 209
+      formula.Age: 99

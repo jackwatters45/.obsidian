@@ -1,0 +1,43 @@
+properties:
+  file.name:
+    displayName: Entry
+  note.categories:
+    displayName: Categories
+  note.created:
+    displayName: Created
+  note.tags:
+    displayName: Tags
+views:
+  - type: table
+    name: Daily Notes
+    filters:
+      and:
+        - 'file.inFolder("Daily")'
+        - 'date(file.basename) >= date(this.start)'
+        - 'date(file.basename) <= date(this.end)'
+    order:
+      - file.name
+      - categories
+      - created
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: All Entries
+    filters:
+      and:
+        - '!tags.contains("daily")'
+        - '!tags.contains("weekly")'
+        - '!tags.contains("monthly")'
+        - or:
+            - 'date(file.basename) >= date(this.start) && date(file.basename) <= date(this.end)'
+            - 'created >= date(this.start) && created <= date(this.end)'
+            - 'file.links.contains(this.file)'
+    order:
+      - file.name
+      - categories
+      - created
+      - tags
+    sort:
+      - property: created
+        direction: DESC

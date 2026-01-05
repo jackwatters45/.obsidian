@@ -12,10 +12,10 @@
   "periodic-notes:open-weekly-note": [
     {
       "modifiers": [
-        "Alt",
-        "Mod"
+        "Mod",
+        "Shift"
       ],
-      "key": "W"
+      "key": "D"
     }
   ],
   "daily-notes": [

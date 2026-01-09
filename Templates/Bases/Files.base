@@ -1,38 +1,19 @@
 filters:
   and:
-    - file.folder = "Clippings"
-    - '!file.name.contains("Template")'
+    - file.folder = "Files"
 properties:
   file.name:
     displayName: Name
-  note.author:
-    displayName: Author
   note.url:
     displayName: URL
   note.created:
     displayName: Added
-  note.topics:
-    displayName: Topics
 views:
   - type: table
     name: All
     order:
       - file.name
-      - author
       - url
-      - created
-      - topics
-    sort:
-      - property: created
-        direction: DESC
-  - type: table
-    name: By Tag
-    filters:
-      and:
-        - list(tags).contains(this)
-    order:
-      - file.name
-      - author
       - created
     sort:
       - property: created
@@ -44,8 +25,7 @@ views:
         - date(note.created).year = this.year
     order:
       - file.name
-      - author
-      - tags
+      - url
     sort:
       - property: file.name
         direction: ASC

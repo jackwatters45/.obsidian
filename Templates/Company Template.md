@@ -4,4 +4,9 @@ categories:
 type: []
 people: []
 url:
+image:
+description:
+industry:
+size:
+loc: []
 ---

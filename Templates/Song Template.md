@@ -1,14 +1,20 @@
 ---
 categories:
-  - "[[Albums]]"
-genre: []
+  - "[[Songs]]"
 artist: ""
-year:
+album: ""
 url: ""
 cover: ""
 rating:
 tags:
   - music
-created: {{date}}
 ---
+
+## Notes
+
+- 
+
+## Listen
+
+- 
 

@@ -9,6 +9,7 @@ guests:
 topics: []
 episode: 
 url: 
+cover: 
 rating: 
 published: 
 last: {{date}}

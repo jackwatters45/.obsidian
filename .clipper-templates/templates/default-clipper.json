@@ -41,7 +41,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "clippings",
+			"value": "clippings, articles",
 			"type": "multitext"
 		}
 	],

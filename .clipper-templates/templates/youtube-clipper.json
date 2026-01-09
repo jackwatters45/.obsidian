@@ -51,7 +51,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "videos",
+			"value": "videos, articles",
 			"type": "multitext"
 		}
 	],

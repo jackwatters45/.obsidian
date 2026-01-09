@@ -41,7 +41,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "twitter",
+			"value": "twitter, articles",
 			"type": "multitext"
 		}
 	],

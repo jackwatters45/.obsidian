@@ -1,0 +1,34 @@
+filters:
+  and:
+    - note.tags.contains("coding")
+    - '!file.name.contains("Template")'
+properties:
+  file.name:
+    displayName: Title
+  note.author:
+    displayName: Author
+  note.language:
+    displayName: Language
+  note.created:
+    displayName: Clipped
+views:
+  - type: table
+    name: Coding
+    order:
+      - file.name
+      - author
+      - language
+      - created
+    sort:
+      - property: created
+        direction: DESC
+  - type: table
+    name: Language
+    filters:
+      and:
+        - list(language).contains(this)
+    order:
+      - file.name
+      - author
+      - language
+      - created

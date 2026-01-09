@@ -1,0 +1,38 @@
+filters:
+  and:
+    - note.tags.contains("videos")
+    - '!file.name.contains("Template")'
+properties:
+  file.name:
+    displayName: Title
+  note.channel:
+    displayName: Channel
+  note.duration:
+    displayName: Duration
+  note.created:
+    displayName: Clipped
+  note.rating:
+    displayName: Rating
+views:
+  - type: table
+    name: Videos
+    order:
+      - file.name
+      - channel
+      - duration
+      - rating
+      - created
+    sort:
+      - property: created
+        direction: DESC
+  - type: table
+    name: Channel
+    filters:
+      and:
+        - list(channel).contains(this)
+    order:
+      - file.name
+      - channel
+      - duration
+      - rating
+      - created

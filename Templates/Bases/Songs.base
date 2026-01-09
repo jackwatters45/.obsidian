@@ -1,0 +1,37 @@
+filters:
+  and:
+    - note.categories.contains(link("Songs"))
+    - '!file.name.contains("Template")'
+properties:
+  file.name:
+    displayName: Song
+  note.artist:
+    displayName: Artist
+  note.album:
+    displayName: Album
+  note.rating:
+    displayName: Rating
+  note.created:
+    displayName: Added
+views:
+  - type: table
+    name: Songs
+    order:
+      - file.name
+      - artist
+      - album
+      - rating
+      - created
+    sort:
+      - property: created
+        direction: DESC
+  - type: table
+    name: Artist
+    filters:
+      and:
+        - list(artist).contains(this)
+    order:
+      - file.name
+      - artist
+      - album
+      - rating

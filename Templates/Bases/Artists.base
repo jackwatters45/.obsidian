@@ -1,0 +1,30 @@
+filters:
+  and:
+    - note.categories.contains(link("Artists"))
+    - '!file.name.contains("Template")'
+properties:
+  file.name:
+    displayName: Artist
+  note.genre:
+    displayName: Genre
+  note.created:
+    displayName: Added
+views:
+  - type: table
+    name: Artists
+    order:
+      - file.name
+      - genre
+      - created
+    sort:
+      - property: created
+        direction: DESC
+  - type: table
+    name: Genre
+    filters:
+      and:
+        - list(genre).contains(this)
+    order:
+      - file.name
+      - genre
+      - created

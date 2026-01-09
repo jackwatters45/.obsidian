@@ -1,0 +1,34 @@
+filters:
+  and:
+    - note.tags.contains("articles")
+    - '!file.name.contains("Template")'
+properties:
+  file.name:
+    displayName: Title
+  note.author:
+    displayName: Author
+  note.published:
+    displayName: Published
+  note.created:
+    displayName: Clipped
+views:
+  - type: table
+    name: Articles
+    order:
+      - file.name
+      - author
+      - published
+      - created
+    sort:
+      - property: created
+        direction: DESC
+  - type: table
+    name: Author
+    filters:
+      and:
+        - list(author).contains(this)
+    order:
+      - file.name
+      - author
+      - published
+      - created

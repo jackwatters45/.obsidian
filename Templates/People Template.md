@@ -15,6 +15,7 @@ created:
   "{ date }":
 met:
 last contact:
+tags: []
 ---
 ## Meetings
 

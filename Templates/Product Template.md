@@ -11,4 +11,5 @@ description: ""
 image: ""
 acquired: {{date}}
 monthly-uses:
+tags: []
 ---

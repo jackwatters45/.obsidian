@@ -2,6 +2,7 @@
 categories: "[[People]]"
 type:
   - "[[Actors]]"
+tags: []
 ---
 ## Movies
 

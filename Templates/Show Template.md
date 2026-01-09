@@ -8,4 +8,5 @@ rating:
 scoreIMDb:
 created: {{date}}
 last: {{date}}
+tags: []
 ---

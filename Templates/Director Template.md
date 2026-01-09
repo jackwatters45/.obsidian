@@ -4,6 +4,7 @@ categories:
 type:
   - "[[Directors]]"
 created: {{date}}
+tags: []
 ---
 ## Movies
 

@@ -11,4 +11,5 @@ scoreGoogle:
 description: ""
 created: {{date}}
 last: {{date}}
+tags: []
 ---

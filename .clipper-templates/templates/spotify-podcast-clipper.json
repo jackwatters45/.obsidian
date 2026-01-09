@@ -1,0 +1,53 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Spotify Podcast",
+	"behavior": "create",
+	"noteContentFormat": "{{selector:meta[property='og:description']:content}}",
+	"properties": [
+		{
+			"name": "categories",
+			"value": "[[Podcasts]]",
+			"type": "multitext"
+		},
+		{
+			"name": "host",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "cover",
+			"value": "{{selector:meta[property='og:image']:content}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "description",
+			"value": "{{selector:meta[property='og:description']:content}}",
+			"type": "text"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "tags",
+			"value": "podcasts",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://open.spotify.com/show/"
+	],
+	"noteNameFormat": "{{selector:meta[property='og:title']:content}}",
+	"path": "References"
+}

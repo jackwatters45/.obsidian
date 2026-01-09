@@ -1,0 +1,63 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "YouTube",
+	"behavior": "create",
+	"noteContentFormat": "![{{schema:name}}]({{url}})",
+	"properties": [
+		{
+			"name": "categories",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "channel",
+			"value": "{{schema:author|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "duration",
+			"value": "{{schema:duration|replace:\"PT\":\"\"|replace:\"H\":\"h \"|replace:\"M\":\"m \"|replace:\"S\":\"s\"}}",
+			"type": "text"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "published",
+			"value": "{{schema:uploadDate|date:YYYY-MM-DD}}",
+			"type": "date"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{schema:thumbnailUrl|slice:0}}",
+			"type": "text"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "topics",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "tags",
+			"value": "videos",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.youtube.com/watch?v="
+	],
+	"noteNameFormat": "{{schema:author}} – {{schema:name}}",
+	"path": "Clippings"
+}

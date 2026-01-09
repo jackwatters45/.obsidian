@@ -1,0 +1,73 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Spotify Episode",
+	"behavior": "create",
+	"noteContentFormat": "{{selector:meta[property='og:description']:content}}",
+	"properties": [
+		{
+			"name": "categories",
+			"value": "[[Podcast episodes]]",
+			"type": "multitext"
+		},
+		{
+			"name": "show",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "guests",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "topics",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "episode",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "cover",
+			"value": "{{selector:meta[property='og:image']:content}}",
+			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{selector:meta[name='music:release_date']:content}}",
+			"type": "date"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "last",
+			"value": "",
+			"type": "date"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "tags",
+			"value": "podcasts",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://open.spotify.com/episode/"
+	],
+	"noteNameFormat": "{{selector:meta[property='og:title']:content}}",
+	"path": "References"
+}

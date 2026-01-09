@@ -1,0 +1,63 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "LinkedIn Company",
+	"behavior": "create",
+	"noteContentFormat": "",
+	"properties": [
+		{
+			"name": "categories",
+			"value": "[[Companies]]",
+			"type": "multitext"
+		},
+		{
+			"name": "industry",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "size",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "loc",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "linkedin",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{selector:meta[property='og:image']:content}}",
+			"type": "text"
+		},
+		{
+			"name": "description",
+			"value": "{{selector:meta[property='og:description']:content}}",
+			"type": "text"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "linkedin",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.linkedin.com/company/"
+	],
+	"noteNameFormat": "{{title|split:\":\"|first|split:\"(\"|first}}",
+	"path": "References"
+}

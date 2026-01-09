@@ -1,0 +1,53 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Spotify Song",
+	"behavior": "create",
+	"noteContentFormat": "",
+	"properties": [
+		{
+			"name": "categories",
+			"value": "[[Songs]]",
+			"type": "multitext"
+		},
+		{
+			"name": "artist",
+			"value": "{{selector:meta[name='music:musician']:content|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "album",
+			"value": "{{selector:meta[name='music:album']:content|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "cover",
+			"value": "{{selector:meta[property='og:image']:content}}",
+			"type": "text"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "tags",
+			"value": "music",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://open.spotify.com/track/"
+	],
+	"noteNameFormat": "{{selector:meta[property='og:title']:content}}",
+	"path": "References"
+}

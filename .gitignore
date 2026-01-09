@@ -4,6 +4,10 @@
 !.obsidian/
 !.obsidian/**
 
+# Webclipper Templates
+!.clipper-templates/
+!.clipper-templates/**
+
 # Obsidian state
 .obsidian/workspace.json
 .obsidian/graph.json

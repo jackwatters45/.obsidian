@@ -1,0 +1,58 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Spotify Album",
+	"behavior": "create",
+	"noteContentFormat": "",
+	"properties": [
+		{
+			"name": "categories",
+			"value": "[[Albums]]",
+			"type": "multitext"
+		},
+		{
+			"name": "artist",
+			"value": "{{selector:meta[name='music:musician']:content|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "genre",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "year",
+			"value": "{{selector:meta[name='music:release_date']:content|date:YYYY}}",
+			"type": "number"
+		},
+		{
+			"name": "cover",
+			"value": "{{selector:meta[property='og:image']:content}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "tags",
+			"value": "music",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://open.spotify.com/album/"
+	],
+	"noteNameFormat": "{{selector:meta[property='og:title']:content}}",
+	"path": "References"
+}

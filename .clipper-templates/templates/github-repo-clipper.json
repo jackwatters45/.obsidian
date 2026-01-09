@@ -1,0 +1,58 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "GitHub Repo",
+	"behavior": "create",
+	"noteContentFormat": "{{selector:meta[property='og:description']:content}}",
+	"properties": [
+		{
+			"name": "categories",
+			"value": "[[GitHub]]",
+			"type": "multitext"
+		},
+		{
+			"name": "author",
+			"value": "{{url|split:\"/\"|slice:3,4|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "languages",
+			"value": "{{selector:.Layout-sidebar a[href*=\"/search?l=\"]|split:'\\n'|first|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "stars",
+			"value": "{{selector:#repo-stars-counter-star}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "description",
+			"value": "{{selector:meta[property='og:description']:content}}",
+			"type": "text"
+		},
+		{
+			"name": "topics",
+			"value": "{{selector:.topic-tag|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "coding",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"/^https:\\/\\/github\\.com\\/[^\\/]+\\/[^\\/]+\\/?$/"
+	],
+	"noteNameFormat": "{{selector:meta[property='og:title']:content|split:\":\"|first}}",
+	"path": "Clippings"
+}

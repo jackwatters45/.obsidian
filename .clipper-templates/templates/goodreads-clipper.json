@@ -1,0 +1,83 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Goodreads",
+	"behavior": "create",
+	"noteContentFormat": "\n## Summary\n\n{{selector:.BookPageMetadataSection__description}}",
+	"properties": [
+		{
+			"name": "categories",
+			"value": "[[Books]]",
+			"type": "multitext"
+		},
+		{
+			"name": "author",
+			"value": "{{selector:.ContributorLink__name|unique|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "genre",
+			"value": "{{selector:.BookPageMetadataSection__genres .BookPageMetadataSection__genreButton|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "cover",
+			"value": "{{selector:.BookCover__image img?src|first}}",
+			"type": "text"
+		},
+		{
+			"name": "pages",
+			"value": "{{selector:p[data-testid='pagesFormat'|split:\\\", \\\"|slice:0|split:\\\" \\\"|slice:0}}",
+			"type": "number"
+		},
+		{
+			"name": "year",
+			"value": "{{selector:p[data-testid='publicationInfo']|split:\\\"First published \\\"|slice:1|date:\\\"YYYY\\\"}}",
+			"type": "number"
+		},
+		{
+			"name": "scoreGr",
+			"value": "{{selector:.RatingStatistics__rating|first|round:2}}",
+			"type": "number"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "language",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "topics",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "finished",
+			"value": "",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "to-read",
+			"type": "multitext"
+		},
+		{
+			"name": "series",
+			"value": "",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.goodreads.com/book/"
+	],
+	"noteNameFormat": "{{selector:.BookPageTitleSection__title h1}}",
+	"path": "References"
+}

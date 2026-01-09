@@ -1,0 +1,74 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "IMDB Reference Show",
+	"behavior": "create",
+	"noteContentFormat": "",
+	"properties": [
+		{
+			"name": "categories",
+			"value": "[[Shows]]",
+			"type": "multitext"
+		},
+		{
+			"name": "genre",
+			"value": "{{selector:.ipc-chip-list a[href*='genre']|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "imdbUrl",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "cover",
+			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "creator",
+			"value": "{{description|split:\"Directed by \"|slice:1|split:\". With\"|first|split:\", \"|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "cast",
+			"value": "{{selector:.ipc-inline-list a[href*='name']|unique|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "year",
+			"value": "{{selector:.hero__primary-text-suffix|split:\"–\"|first}}",
+			"type": "number"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "scoreImdb",
+			"value": "{{selector:.ipc-rating-star--rating|first|round:1}}",
+			"type": "number"
+		},
+		{
+			"name": "last",
+			"value": "",
+			"type": "date"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "to-watch, media",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"/^https:\\/\\/www\\.imdb\\.com\\/title\\/tt\\d+\\/reference\\/?$/",
+		"schema:@TVSeries"
+	],
+	"noteNameFormat": "{{selector:.hero__primary-text}}",
+	"path": "References"
+}

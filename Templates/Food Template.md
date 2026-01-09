@@ -6,4 +6,5 @@ rating:
 price:
 last: {{date}}
 created: {{date}}
+tags: []
 ---

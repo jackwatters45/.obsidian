@@ -8,4 +8,5 @@ created: {{date}}
 published:
 topics: []
 status:
+tags: []
 ---

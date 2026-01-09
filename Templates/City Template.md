@@ -10,6 +10,7 @@ last:
 coordinates:
   - "35.021041"
   - "135.7556075"
+tags: []
 ---
 ## Trips
 

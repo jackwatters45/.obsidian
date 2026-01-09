@@ -4,7 +4,11 @@ categories:
 genre: []
 artist: ""
 year:
-created: {{date}}
+url: ""
+cover: ""
 rating:
+tags:
+  - music
+created: {{date}}
 ---
 

@@ -1,6 +1,5 @@
 ---
-categories:
-  - "[[Clippings]]"
+categories: []
 tags:
   - clippings
 author: []

@@ -1,39 +1,51 @@
 filters:
   and:
-    - note.categories.contains(link("Clippings"))
+    - file.folder = "Clippings"
     - '!file.name.contains("Template")'
 properties:
   file.name:
-    displayName: Title
+    displayName: Name
   note.author:
     displayName: Author
+  note.url:
+    displayName: URL
   note.created:
-    displayName: Clipped
-  note.published:
-    displayName: Published
+    displayName: Added
+  note.topics:
+    displayName: Topics
 views:
   - type: table
-    name: Clippings
+    name: All
     order:
       - file.name
       - author
+      - url
       - created
-      - published
+      - topics
     sort:
       - property: created
         direction: DESC
-    columnSize:
-      note.author: 140
   - type: table
-    name: Author
+    name: By Tag
     filters:
       and:
-        - list(author).contains(this)
+        - list(tags).contains(this)
     order:
       - file.name
       - author
       - created
-      - published
     sort:
-      - property: clipped
+      - property: created
         direction: DESC
+  - type: table
+    name: By Date
+    filters:
+      and:
+        - date(note.created).year = this.year
+    order:
+      - file.name
+      - author
+      - tags
+    sort:
+      - property: file.name
+        direction: ASC

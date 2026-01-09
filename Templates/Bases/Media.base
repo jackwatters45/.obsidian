@@ -1,0 +1,60 @@
+filters:
+  and:
+    - note.tags.contains("media")
+    - '!file.name.contains("Template")'
+properties:
+  file.name:
+    displayName: Name
+  note.year:
+    displayName: Year
+  note.rating:
+    displayName: Rating
+  note.genre:
+    displayName: Genre
+  note.director:
+    displayName: Director
+  note.cast:
+    displayName: Cast
+  note.score:
+    displayName: Score
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - year
+      - rating
+      - genre
+      - director
+      - cast
+      - score
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: To-watch
+    filters:
+      and:
+        - note.rating.isEmpty()
+    order:
+      - file.name
+      - year
+      - score
+      - genre
+      - director
+    sort:
+      - property: score
+        direction: DESC
+  - type: table
+    name: Favorites
+    filters:
+      and:
+        - note.rating >= 7
+    order:
+      - file.name
+      - rating
+      - year
+      - director
+    sort:
+      - property: rating
+        direction: DESC

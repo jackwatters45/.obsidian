@@ -1,0 +1,31 @@
+filters:
+  and:
+    - file.folder = "Files"
+properties:
+  file.name:
+    displayName: Name
+  note.url:
+    displayName: URL
+  note.created:
+    displayName: Added
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - url
+      - created
+    sort:
+      - property: created
+        direction: DESC
+  - type: table
+    name: By Date
+    filters:
+      and:
+        - date(note.created).year = this.year
+    order:
+      - file.name
+      - url
+    sort:
+      - property: file.name
+        direction: ASC

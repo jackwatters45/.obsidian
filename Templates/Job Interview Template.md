@@ -8,6 +8,7 @@ people: []
 date: {{date}}
 role:
 rating:
+tags: []
 ---
 ## Questions and topics
 

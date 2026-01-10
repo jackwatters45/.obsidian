@@ -7,4 +7,4 @@ categories:
 
 People I know, have met, or want to remember.
 
-[[People.base]]
+![[People.base]]

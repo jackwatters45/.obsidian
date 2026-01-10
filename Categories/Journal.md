@@ -7,4 +7,4 @@ categories:
 
 Journal entries and reflections.
 
-[[Journal.base]]
+![[Journal.base]]

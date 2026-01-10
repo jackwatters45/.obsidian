@@ -7,4 +7,4 @@ categories:
 
 Trips and travel experiences.
 
-[[Trips.base]]
+![[Trips.base]]

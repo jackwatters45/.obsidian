@@ -9,4 +9,4 @@ related:
 
 Podcasts I follow and episodes.
 
-[[Podcasts.base]]
+![[Podcasts.base]]

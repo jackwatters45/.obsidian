@@ -1,13 +1,15 @@
 ---
 categories:
   - "[[Companies]]"
-type: []
-people: []
+linkedin:
 url:
+careers:
+people: []
 image:
 description:
-industry:
+industry: []
 size:
 loc: []
+created: {{date}}
 tags: []
 ---

@@ -7,4 +7,4 @@ tags:
 
 Notes related to coding, software development, and programming.
 
-[[Coding.base]]
+![[Coding.base]]

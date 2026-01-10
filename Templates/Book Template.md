@@ -10,8 +10,7 @@ scoreGr:
 rating:
 language:
 topics: []
-created:
-  {{ date }} {{ team }}
+created: {{date}}
 finished:
 tags:
   - to-read

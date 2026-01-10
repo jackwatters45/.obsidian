@@ -7,4 +7,4 @@ categories:
 
 Products researched, bought, or want to buy.
 
-[[Products.base]]
+![[Products.base]]

@@ -7,4 +7,4 @@ tags:
 
 Long-form articles, blog posts, and written content.
 
-[[Articles.base]]
+![[Articles.base]]

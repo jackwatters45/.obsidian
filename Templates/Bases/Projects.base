@@ -22,6 +22,7 @@ views:
       - year
       - status
       - url
+      - github
     sort:
       - column: note.status
         direction: ASC

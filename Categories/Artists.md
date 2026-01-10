@@ -7,4 +7,4 @@ categories:
 
 Music artists and musicians.
 
-[[Artists.base]]
+![[Artists.base]]

@@ -7,4 +7,4 @@ categories:
 
 Songs from Spotify and other sources.
 
-[[Songs.base]]
+![[Songs.base]]

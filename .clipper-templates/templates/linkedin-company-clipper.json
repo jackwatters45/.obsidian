@@ -42,7 +42,7 @@
 		{
 			"name": "industry",
 			"value": "",
-			"type": "text"
+			"type": "multitext"
 		},
 		{
 			"name": "size",

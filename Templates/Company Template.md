@@ -7,7 +7,7 @@ careers:
 people: []
 image:
 description:
-industry:
+industry: []
 size:
 loc: []
 created:

@@ -7,4 +7,4 @@ categories:
 
 Recipes collected and want to try.
 
-[[Recipes.base]]
+![[Recipes.base]]

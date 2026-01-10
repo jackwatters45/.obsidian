@@ -7,4 +7,4 @@ categories:
 
 Companies, organizations, and businesses.
 
-[[Companies.base]]
+![[Companies.base]]

@@ -7,7 +7,7 @@ categories:
 
 Books read, want to read, or currently reading.
 
-[[Books.base]]
+![[Books.base]]
 
 ## Book lists
 - [Miguel de Cervantes Prize](https://en.wikipedia.org/wiki/Miguel_de_Cervantes_Prize#Cervantes_Prize_winners)

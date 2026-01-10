@@ -7,4 +7,4 @@ categories:
 
 GitHub repositories and code.
 
-[[GitHub.base]]
+![[GitHub.base]]

@@ -7,4 +7,4 @@ categories:
 
 Blog posts and articles.
 
-[[Posts.base]]
+![[Posts.base]]

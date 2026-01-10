@@ -7,7 +7,7 @@ categories:
 
 Movies I've watched, rated, or want to watch.
 
-[[Movies.base]]
+![[Movies.base]]
 
 ## Favorites
 

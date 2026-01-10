@@ -7,4 +7,4 @@ categories:
 
 Music, movie, and other genres.
 
-[[Genre.base]]
+![[Genre.base]]

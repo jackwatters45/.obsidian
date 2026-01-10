@@ -7,4 +7,4 @@ categories:
 
 Events attended or want to attend.
 
-[[Events.base]]
+![[Events.base]]

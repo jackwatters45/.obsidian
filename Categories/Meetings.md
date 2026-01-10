@@ -7,4 +7,4 @@ categories:
 
 Meeting notes and conversations.
 
-[[Meetings.base]]
+![[Meetings.base]]

@@ -7,4 +7,4 @@ categories:
 
 Ideas, inspiration, and creative sparks.
 
-[[Inspiration.base]]
+![[Inspiration.base]]

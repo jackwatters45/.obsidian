@@ -7,4 +7,4 @@ tags:
 
 Movies, TV shows, and other media content.
 
-[[Media.base]]
+![[Media.base]]

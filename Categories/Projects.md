@@ -7,4 +7,4 @@ categories:
 
 Active and past projects.
 
-[[Projects.base]]
+![[Projects.base]]

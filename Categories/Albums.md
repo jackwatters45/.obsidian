@@ -7,4 +7,4 @@ categories:
 
 Music albums.
 
-[[Albums.base]]
+![[Albums.base]]

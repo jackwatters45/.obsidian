@@ -7,5 +7,5 @@ categories:
 
 Places visited, want to visit, or lived.
 
-[[Places.base]]
-[[Map.base]]
+![[Places.base]]
+![[Map.base]]

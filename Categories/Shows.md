@@ -7,4 +7,4 @@ categories:
 
 TV shows, series, and episodes.
 
-[[Shows.base]]
+![[Shows.base]]

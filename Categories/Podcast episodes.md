@@ -7,4 +7,4 @@ categories:
 
 Individual podcast episodes.
 
-[[Podcast episodes.base]]
+![[Podcast episodes.base]]

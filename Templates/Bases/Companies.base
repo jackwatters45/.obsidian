@@ -17,6 +17,7 @@ views:
     order:
       - file.name
       - url
+      - careers
       - people
     columnSize:
       note.url: 239

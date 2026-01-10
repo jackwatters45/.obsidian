@@ -10,6 +10,36 @@
 			"type": "multitext"
 		},
 		{
+			"name": "linkedin",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "careers",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "people",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "image",
+			"value": "{{selector:meta[property='og:image']:content}}",
+			"type": "text"
+		},
+		{
+			"name": "description",
+			"value": "{{selector:meta[property='og:description']:content}}",
+			"type": "text"
+		},
+		{
 			"name": "industry",
 			"value": "",
 			"type": "text"
@@ -23,26 +53,6 @@
 			"name": "loc",
 			"value": "",
 			"type": "multitext"
-		},
-		{
-			"name": "linkedin",
-			"value": "{{url}}",
-			"type": "text"
-		},
-		{
-			"name": "url",
-			"value": "",
-			"type": "text"
-		},
-		{
-			"name": "image",
-			"value": "{{selector:meta[property='og:image']:content}}",
-			"type": "text"
-		},
-		{
-			"name": "description",
-			"value": "{{selector:meta[property='og:description']:content}}",
-			"type": "text"
 		},
 		{
 			"name": "created",

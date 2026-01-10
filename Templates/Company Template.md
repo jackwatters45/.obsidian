@@ -10,6 +10,6 @@ description:
 industry: []
 size:
 loc: []
-created:
+created: {{date}}
 tags: []
 ---

@@ -15,5 +15,4 @@ tags:
 
 
 ## Notes
-
 ![[Daily.base]]

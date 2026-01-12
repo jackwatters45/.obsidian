@@ -27,7 +27,15 @@ previous: "[[${prevWeek}]]"
 next: "[[${nextWeek}]]"
 ---
 
+## Journal 
+
+
 ## Goals
+
+
+## Week Prep
+- [ ] Clothers Prep
+- [ ] Meal Prep
 
 
 ## Notes

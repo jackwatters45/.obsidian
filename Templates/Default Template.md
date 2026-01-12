@@ -1,4 +1,4 @@
 ---
-created: <% tp.date.now("YYYY-MM-DD") %>
+created: {{date}}
 tags: []
 ---

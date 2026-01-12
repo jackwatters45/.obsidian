@@ -26,7 +26,15 @@ tags:
 
 ---
 
+## Journal 
+
+
 ## Goals
+
+
+## Week Prep
+- [ ] Clothers Prep
+- [ ] Meal Prep
 
 
 ## Notes

@@ -19,10 +19,6 @@
       "template": "Templates/Weekly Note Template.md"
     },
     {
-      "folder": "Monthly",
-      "template": "Templates/Monthly Note Template.md"
-    },
-    {
       "folder": "/",
       "template": "Templates/Default Template.md"
     }
@@ -34,14 +30,14 @@
       "template": ""
     }
   ],
-  "empty_file_template": "Templates/Default Template.md",
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
-    ""
+    "Templates/Weekly Note Template.md"
   ],
   "startup_templates": [
     ""
   ],
-  "intellisense_render": 1
+  "intellisense_render": 1,
+  "empty_file_template": "Templates/Default Template.md"
 }

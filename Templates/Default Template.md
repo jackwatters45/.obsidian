@@ -1,4 +1,4 @@
 ---
 created: {{date}}
-tags:
+tags: []
 ---

@@ -12,9 +12,9 @@ views:
     name: Daily Notes
     filters:
       and:
-        - 'file.inFolder("Daily")'
-        - 'date(file.basename) >= date(this.start)'
-        - 'date(file.basename) <= date(this.end)'
+        - file.inFolder("Daily")
+        - date(this.start) && date(file.basename) >= date(this.start)
+        - date(this.end) && date(file.basename) <= date(this.end)
     order:
       - file.name
       - categories
@@ -26,13 +26,12 @@ views:
     name: All Entries
     filters:
       and:
-        - '!tags.contains("daily")'
-        - '!tags.contains("weekly")'
-        - '!tags.contains("monthly")'
+        - '!file.inFolder("Daily")'
+        - '!file.inFolder("Weekly")'
         - or:
-            - 'date(file.basename) >= date(this.start) && date(file.basename) <= date(this.end)'
-            - 'created >= date(this.start) && created <= date(this.end)'
-            - 'file.links.contains(this.file)'
+            - date(this.start) && date(this.end) && date(file.basename) >= date(this.start) && date(file.basename) <= date(this.end)
+            - date(this.start) && date(this.end) && created >= date(this.start) && created <= date(this.end)
+            - file.links.contains(this.file)
     order:
       - file.name
       - categories

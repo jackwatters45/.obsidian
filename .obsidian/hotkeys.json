@@ -9,7 +9,7 @@
     }
   ],
   "workspace:undo-close-pane": [],
-  "periodic-notes:open-weekly-note": [
+  "templater-obsidian:Templates/Weekly Note Template.md": [
     {
       "modifiers": [
         "Mod",
@@ -90,5 +90,14 @@
       "key": "L"
     }
   ],
-  "editor:toggle-checklist-status": []
+  "editor:toggle-checklist-status": [],
+  "templater-obsidian:create-new-note-from-template": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "N"
+    }
+  ]
 }

@@ -1,5 +1,6 @@
 ---
-tags: []
+tags:
+  - home
 categories:
   - "[[Books]]"
 ---

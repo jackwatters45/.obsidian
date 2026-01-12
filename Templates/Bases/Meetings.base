@@ -2,6 +2,7 @@ filters:
   and:
     - categories.contains(link("Meetings"))
     - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
 properties:
   note.date:
     displayName: Date

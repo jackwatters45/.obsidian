@@ -1,0 +1,59 @@
+filters:
+  and:
+    - note.categories.contains(link("Tech"))
+    - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
+properties:
+  file.name:
+    displayName: Name
+  note.url:
+    displayName: URL
+  note.githubUrl:
+    displayName: GitHub
+  note.language:
+    displayName: Language
+  note.type:
+    displayName: Topics
+  note.created:
+    displayName: Added
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - url
+      - githubUrl
+      - language
+      - type
+      - created
+    sort:
+      - property: created
+        direction: DESC
+  - type: table
+    name: Language
+    filters:
+      and:
+        - list(language).contains(this)
+    order:
+      - file.name
+      - url
+      - githubUrl
+      - language
+      - created
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Topic
+    filters:
+      and:
+        - list(type).contains(this)
+    order:
+      - file.name
+      - url
+      - githubUrl
+      - language
+      - created
+    sort:
+      - property: file.name
+        direction: ASC

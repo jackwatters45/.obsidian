@@ -2,6 +2,7 @@ filters:
   and:
     - note.categories.contains(link("Products"))
     - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
 formulas:
   Owned: ((now() - acquired).months).round()
   totalUses: monthlyUses * formula.Owned.round()

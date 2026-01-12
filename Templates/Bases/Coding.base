@@ -1,7 +1,8 @@
 filters:
   and:
-    - note.tags.contains("coding")
+    - tags.contains("coding")
     - '!file.name.contains("Template")'
+    - file.name != "Coding"
 properties:
   file.name:
     displayName: Title

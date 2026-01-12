@@ -2,6 +2,7 @@
 categories:
   - "[[Projects]]"
 ---
+[[Seeds]]
 
 # Projects
 

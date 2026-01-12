@@ -2,6 +2,7 @@ filters:
   and:
     - note.categories.contains(link("Places"))
     - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
 properties:
   note.type:
     displayName: Type

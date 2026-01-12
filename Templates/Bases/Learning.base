@@ -1,0 +1,86 @@
+filters:
+  and:
+    - note.categories.contains(link("Learning"))
+    - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
+properties:
+  file.name:
+    displayName: Name
+  note.source:
+    displayName: Source
+  note.type:
+    displayName: Type
+  note.status:
+    displayName: Status
+  note.rating:
+    displayName: Rating
+  note.topics:
+    displayName: Topics
+  note.created:
+    displayName: Added
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - source
+      - type
+      - status
+      - rating
+      - created
+    sort:
+      - property: created
+        direction: DESC
+  - type: table
+    name: In Progress
+    filters:
+      and:
+        - note.status = "in progress"
+    order:
+      - file.name
+      - source
+      - type
+      - rating
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Completed
+    filters:
+      and:
+        - note.status = "completed"
+    order:
+      - file.name
+      - source
+      - type
+      - rating
+    sort:
+      - property: rating
+        direction: DESC
+  - type: table
+    name: Type
+    filters:
+      and:
+        - list(type).contains(this)
+    order:
+      - file.name
+      - source
+      - status
+      - rating
+    sort:
+      - property: rating
+        direction: DESC
+  - type: table
+    name: Topic
+    filters:
+      and:
+        - list(topics).contains(this)
+    order:
+      - file.name
+      - source
+      - type
+      - status
+      - rating
+    sort:
+      - property: rating
+        direction: DESC

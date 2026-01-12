@@ -3,10 +3,6 @@ categories:
   - "[[Movies]]"
 ---
 
-# Movies
-https://www.google.com/search?q=The+Cuba+Libre+Story
-
-
 Movies I've watched, rated, or want to watch.
 
 ![[Movies.base]]

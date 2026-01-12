@@ -2,6 +2,7 @@ filters:
   and:
     - categories.contains(link("Companies"))
     - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
 properties:
   file.name:
     displayName: Company

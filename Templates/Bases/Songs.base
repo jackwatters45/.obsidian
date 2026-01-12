@@ -2,6 +2,7 @@ filters:
   and:
     - note.categories.contains(link("Songs"))
     - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
 properties:
   file.name:
     displayName: Song

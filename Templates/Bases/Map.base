@@ -2,6 +2,7 @@ filters:
   and:
     - categories.contains(link("Places"))
     - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
 formulas:
   Icon: list(type)[0].asFile().properties.icon
   Color: list(type)[0].asFile().properties.color

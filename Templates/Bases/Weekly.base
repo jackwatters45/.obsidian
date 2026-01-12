@@ -17,11 +17,12 @@ views:
         - date(this.end) && date(file.basename) <= date(this.end)
     order:
       - file.name
-      - categories
-      - created
     sort:
       - property: file.name
         direction: ASC
+    columnSize:
+      file.name: 147
+      note.categories: 176
   - type: table
     name: All Entries
     filters:

@@ -19,8 +19,7 @@ views:
     name: Daily notes
     filters:
       and:
-        - '!tags.contains("daily")'
-        - '!tags.contains("monthly")'
+        - '!file.inFolder("Daily")'
     order:
       - file.name
       - created
@@ -40,26 +39,10 @@ views:
       note.created: 128
       note.categories: 119
   - type: table
-    name: Monthly
-    filters:
-      and:
-        - '!tags.contains("daily")'
-        - '!tags.contains("monthly")'
-    order:
-      - file.name
-      - categories
-      - created
-    sort:
-      - property: file.name
-        direction: ASC
-      - property: created
-        direction: DESC
-  - type: table
     name: Yearly
     filters:
       and:
-        - '!tags.contains("daily")'
-        - '!tags.contains("monthly")'
+        - '!file.inFolder("Daily")'
     order:
       - file.name
       - categories
@@ -83,12 +66,11 @@ views:
     name: Weekly All
     filters:
       and:
-        - '!tags.contains("daily")'
-        - '!tags.contains("weekly")'
-        - '!tags.contains("monthly")'
+        - '!file.inFolder("Daily")'
+        - '!file.inFolder("Weekly")'
         - or:
-            - 'date(file.basename) >= date(this.start) && date(file.basename) <= date(this.end)'
-            - 'created >= date(this.start) && created <= date(this.end)'
+            - 'date(this.start) && date(this.end) && date(file.basename) >= date(this.start) && date(file.basename) <= date(this.end)'
+            - 'date(this.start) && date(this.end) && created >= date(this.start) && created <= date(this.end)'
             - 'file.links.contains(this.file)'
     order:
       - file.name

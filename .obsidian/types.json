@@ -12,6 +12,7 @@
     "rating": "number",
     "finished": "date",
     "series": "multitext",
-    "created": "date"
+    "created": "date",
+    "status": "multitext"
   }
 }

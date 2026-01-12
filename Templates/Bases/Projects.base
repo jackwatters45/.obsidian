@@ -1,7 +1,8 @@
 filters:
   and:
     - '!file.name.contains("Template")'
-    - note.categories.contains(link("Projects"))
+    - categories.contains(link("Projects"))
+    - file.name != "Projects"
 properties:
   note.status:
     displayName: Status
@@ -24,9 +25,9 @@ views:
       - url
       - github
     sort:
-      - column: note.status
+      - property: status
         direction: ASC
-      - column: note.year
+      - property: year
         direction: DESC
     columnSize:
       file.name: 209

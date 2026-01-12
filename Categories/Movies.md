@@ -4,6 +4,8 @@ categories:
 ---
 
 # Movies
+https://www.google.com/search?q=The+Cuba+Libre+Story
+
 
 Movies I've watched, rated, or want to watch.
 
@@ -11,8 +13,8 @@ Movies I've watched, rated, or want to watch.
 
 ## Favorites
 
-[[Movies.base#Favorites]]
+![[Movies.base#Favorites]]
 
 ## Last seen
 
-[[Movies.base#Last seen]]
+![[Movies.base#Last seen]]

@@ -1,6 +1,7 @@
 filters:
   and:
     - file.folder = "Files"
+    - '!file.name.contains("Template")'
 properties:
   file.name:
     displayName: Name

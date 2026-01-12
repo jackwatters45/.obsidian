@@ -1,0 +1,34 @@
+filters:
+  and:
+    - note.categories.contains(link("Career"))
+    - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
+properties:
+  file.name:
+    displayName: Name
+  note.type:
+    displayName: Type
+  note.created:
+    displayName: Added
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - type
+      - created
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Type
+    filters:
+      and:
+        - list(type).contains(this)
+    order:
+      - file.name
+      - type
+      - created
+    sort:
+      - property: file.name
+        direction: ASC

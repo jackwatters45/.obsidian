@@ -2,6 +2,7 @@ filters:
   and:
     - categories.contains(link("Movies"))
     - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
 properties:
   file.name:
     displayName: Name
@@ -81,7 +82,7 @@ views:
     name: Favorites
     filters:
       and:
-        - note.rating > 6
+        - rating >= 6
     order:
       - file.name
       - director

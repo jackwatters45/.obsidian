@@ -27,7 +27,15 @@ previous: "[[${prevWeek}]]"
 next: "[[${nextWeek}]]"
 ---
 
+## Journal
+
+
 ## Goals
+
+
+## Week Prep
+- [ ] Clothes Prep
+- [ ] Meal Prep
 
 
 ## Notes
@@ -42,34 +50,5 @@ next: "[[${nextWeek}]]"
 `;
   const folder = app.vault.getAbstractFileByPath("Weekly");
   await tp.file.create_new(content, weekFileName, true, folder);
-  return;
 }
-
-const startDate = weekMoment.clone().startOf('isoWeek').format("YYYY-MM-DD");
-const endDate = weekMoment.clone().endOf('isoWeek').format("YYYY-MM-DD");
-const prevWeek = weekMoment.clone().subtract(1, 'week').format("GGGG-[W]WW");
-const nextWeek = weekMoment.clone().add(1, 'week').format("GGGG-[W]WW");
--%>
----
-tags:
-  - weekly
-start: <% startDate %>
-end: <% endDate %>
-previous: "[[<% prevWeek %>]]"
-next: "[[<% nextWeek %>]]"
----
-
-## Goals
-
-
-## Notes
-
-
-## Daily Notes
-
-![[Weekly.base#Daily Notes]]
-
-## All Entries
-![[Weekly.base#All Entries]]
-
-
+%>

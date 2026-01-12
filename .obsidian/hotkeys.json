@@ -9,7 +9,7 @@
     }
   ],
   "workspace:undo-close-pane": [],
-  "periodic-notes:open-weekly-note": [
+  "templater-obsidian:Templates/Weekly Note Template.md": [
     {
       "modifiers": [
         "Mod",

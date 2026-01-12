@@ -2,6 +2,7 @@ filters:
   and:
     - note.categories.contains(link("Artists"))
     - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
 properties:
   file.name:
     displayName: Artist

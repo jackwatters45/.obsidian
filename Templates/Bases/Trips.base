@@ -2,6 +2,7 @@ filters:
   and:
     - note.categories.contains(link("Trips"))
     - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
 properties:
   note.start:
     displayName: Start

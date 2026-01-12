@@ -2,6 +2,7 @@ filters:
   and:
     - note.categories.contains(link("Inspiration"))
     - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
 properties:
   file.name:
     displayName: Title

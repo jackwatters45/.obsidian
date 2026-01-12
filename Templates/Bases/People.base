@@ -2,6 +2,7 @@ filters:
   and:
     - '!file.name.contains("Template")'
     - categories.contains(link("People"))
+    - '!file.inFolder("Categories")'
 formulas:
   Age: (now() - birthday).years.floor()
 properties:

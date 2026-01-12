@@ -2,6 +2,7 @@ filters:
   and:
     - categories.contains(link("Books"))
     - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
 properties:
   note.author:
     displayName: Author

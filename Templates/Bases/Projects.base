@@ -3,6 +3,7 @@ filters:
     - '!file.name.contains("Template")'
     - categories.contains(link("Projects"))
     - file.name != "Projects"
+    - '!file.inFolder("Categories")'
 properties:
   note.status:
     displayName: Status

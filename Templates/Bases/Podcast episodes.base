@@ -2,6 +2,7 @@ filters:
   and:
     - note.categories.contains(link("Podcast episodes"))
     - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
 properties:
   file.name:
     displayName: Podcast

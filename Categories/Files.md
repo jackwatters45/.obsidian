@@ -1,4 +1,7 @@
 ---
+tags: []
+categories:
+  - "[[Files]]"
 ---
 
 # Files

@@ -1,6 +1,7 @@
 filters:
   and:
     - list(genre).contains(this)
+    - '!file.name.contains("Template")'
 display:
   note.rating: Rating
   note.categories: Category

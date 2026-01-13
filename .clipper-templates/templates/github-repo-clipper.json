@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "GitHub Repo",
 	"behavior": "create",
-	"noteContentFormat": "{{selector:meta[property='og:description']:content}}",
+	"noteContentFormat": "",
 	"properties": [
 		{
 			"name": "categories",
@@ -16,7 +16,7 @@
 		},
 		{
 			"name": "languages",
-			"value": "{{selector:.Layout-sidebar a[href*=\"/search?l=\"]|split:'\\n'|first|wikilink|join}}",
+			"value": "{{selector:li.d-inline span.text-bold|join}}",
 			"type": "multitext"
 		},
 		{
@@ -31,7 +31,7 @@
 		},
 		{
 			"name": "description",
-			"value": "{{selector:meta[property='og:description']:content}}",
+			"value": "{{selector:.f4.my-3}}",
 			"type": "text"
 		},
 		{
@@ -53,6 +53,6 @@
 	"triggers": [
 		"/^https:\\/\\/github\\.com\\/[^\\/]+\\/[^\\/]+\\/?$/"
 	],
-	"noteNameFormat": "{{selector:meta[property='og:title']:content|split:\":\"|first}}",
+	"noteNameFormat": "{{selector:strong[itemprop='name'] a}}",
 	"path": "Clippings"
 }

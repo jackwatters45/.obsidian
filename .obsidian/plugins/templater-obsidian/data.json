@@ -33,7 +33,8 @@
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
-    "Templates/Weekly Note Template.md"
+    "Templates/Weekly Note Template.md",
+    "Templates/Tomorrow Daily Note Template.md"
   ],
   "startup_templates": [
     ""

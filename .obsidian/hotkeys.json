@@ -99,5 +99,14 @@
       ],
       "key": "N"
     }
+  ],
+  "templater-obsidian:Templates/Tomorrow Daily Note Template.md": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "D"
+    }
   ]
 }

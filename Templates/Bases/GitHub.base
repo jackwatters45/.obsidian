@@ -8,32 +8,21 @@ properties:
     displayName: Repository
   note.author:
     displayName: Author
-  note.language:
-    displayName: Language
   note.stars:
     displayName: Stars
   note.created:
     displayName: Clipped
+  note.description:
+    displayName: Description
 views:
   - type: table
     name: Repositories
     order:
       - file.name
       - author
-      - language
       - stars
       - created
+      - description
     sort:
       - property: created
         direction: DESC
-  - type: table
-    name: Language
-    filters:
-      and:
-        - list(language).contains(this)
-    order:
-      - file.name
-      - author
-      - language
-      - stars
-      - created

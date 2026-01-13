@@ -1,0 +1,35 @@
+filters:
+  and:
+    - note.categories.contains(link("Gym"))
+    - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
+properties:
+  file.name:
+    displayName: Name
+  note.type:
+    displayName: Type
+  note.created:
+    displayName: Added
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - type
+      - created
+    sort:
+      - property: created
+        direction: DESC
+    columnSize:
+      note.type: 116
+  - type: table
+    name: Type
+    filters:
+      and:
+        - list(type).contains(this)
+    order:
+      - file.name
+      - created
+    sort:
+      - property: file.name
+        direction: ASC

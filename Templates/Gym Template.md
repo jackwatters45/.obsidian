@@ -1,0 +1,7 @@
+---
+categories:
+  - "[[Gym]]"
+type:
+tags: []
+---
+

@@ -1,4 +1,6 @@
 ---
+tags:
+  - home
 categories:
   - "[[Books]]"
 ---

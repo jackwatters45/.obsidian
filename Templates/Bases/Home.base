@@ -1,0 +1,15 @@
+filters:
+  and:
+    - tags.contains("home")
+    - '!file.name.contains("Template")'
+properties:
+  file.name:
+    displayName: Name
+views:
+  - type: table
+    name: Home
+    order:
+      - file.name
+    sort:
+      - property: file.name
+        direction: ASC

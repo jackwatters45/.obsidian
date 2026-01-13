@@ -23,6 +23,18 @@ views:
       - property: created
         direction: DESC
   - type: table
+    name: To Read
+    filters:
+      and:
+        - note.tags.contains("to-read")
+    order:
+      - file.name
+      - author
+      - published
+    sort:
+      - property: created
+        direction: DESC
+  - type: table
     name: Author
     filters:
       and:

@@ -1,4 +1,5 @@
 ---
+template: "Place Template"
 categories:
   - "[[Places]]"
 type: []

@@ -1,4 +1,5 @@
 ---
+template: "Food Template"
 categories:
   - "[[Food]]"
 maker:

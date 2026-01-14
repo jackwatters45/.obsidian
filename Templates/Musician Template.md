@@ -1,4 +1,5 @@
 ---
+template: "Musician Template"
 categories: "[[People]]"
 type:
   - "[[Musicians]]"

@@ -1,4 +1,5 @@
 ---
+template: "Meditation Template"
 categories:
   - "[[Meditations]]"
 tags:

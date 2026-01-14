@@ -1,4 +1,5 @@
 ---
+template: "Author Template"
 categories: "[[People]]"
 type:
   - "[[Authors]]"

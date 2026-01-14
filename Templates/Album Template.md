@@ -1,4 +1,5 @@
 ---
+template: "Album Template"
 categories:
   - "[[Albums]]"
 genre: []

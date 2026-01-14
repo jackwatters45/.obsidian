@@ -1,4 +1,5 @@
 ---
+template: "People Template"
 categories:
   - "[[People]]"
 birthday:
@@ -18,4 +19,4 @@ tags: []
 ---
 ## Meetings
 
-[[Meetings.base#Person]]
+![[Meetings.base#Person]]

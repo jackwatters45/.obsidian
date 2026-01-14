@@ -1,4 +1,5 @@
 ---
+template: "Podcast Template"
 categories:
   - "[[Podcasts]]"
 host: []

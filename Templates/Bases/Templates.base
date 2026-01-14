@@ -1,12 +1,7 @@
-filters:
-  and:
-    - file.path.contains("/Templates")
-views:
-  - type: table
-    name: Table
-    order:
-      - file.name
-      - categories
-    sort: []
-    columnSize:
-      file.name: 234
+```dataview
+TABLE length(rows) as "Count"
+FROM ""
+WHERE template
+GROUP BY template
+SORT length(rows) DESC
+```

@@ -1,4 +1,5 @@
 ---
+template: "Book Template"
 categories:
   - "[[Books]]"
 author: []

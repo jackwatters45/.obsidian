@@ -1,4 +1,5 @@
 ---
+template: "Email Template"
 categories:
   - "[[Emails]]"
 created: {{date}}

@@ -1,4 +1,5 @@
 ---
+template: "Place Type Template"
 tags:
   - places/types
 ---

@@ -1,4 +1,5 @@
 ---
+template: "Event Template"
 categories:
   - "[[Events]]"
 tags:

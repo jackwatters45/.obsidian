@@ -1,4 +1,5 @@
 ---
+template: "Director Template"
 categories:
   - "[[People]]"
 type:

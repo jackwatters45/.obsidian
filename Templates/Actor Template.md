@@ -1,4 +1,5 @@
 ---
+template: "Actor Template"
 categories: "[[People]]"
 type:
   - "[[Actors]]"

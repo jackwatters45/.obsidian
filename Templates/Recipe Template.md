@@ -1,4 +1,5 @@
 ---
+template: "Recipe Template"
 categories:
   - "[[Recipes]]"
 cuisine:

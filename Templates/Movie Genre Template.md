@@ -1,4 +1,5 @@
 ---
+template: "Movie Genre Template"
 tags:
   - movies/genres
 ---

@@ -1,4 +1,5 @@
 ---
+template: "Show Template"
 categories:
   - "[[Shows]]"
 genre: []

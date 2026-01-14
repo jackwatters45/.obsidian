@@ -1,4 +1,5 @@
 ---
+template: "Restaurant Template"
 categories:
   - "[[Places]]"
 type:

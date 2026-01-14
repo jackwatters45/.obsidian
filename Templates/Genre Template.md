@@ -1,4 +1,5 @@
 ---
+template: "Genre Template"
 tags:
   - genres
 ---

@@ -1,4 +1,5 @@
 ---
+template: "Contact Template"
 categories:
   - "[[People]]"
 phone:

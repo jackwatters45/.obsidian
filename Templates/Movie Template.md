@@ -1,4 +1,5 @@
 ---
+template: "Movie Template"
 categories:
   - "[[Movies]]"
 cover:

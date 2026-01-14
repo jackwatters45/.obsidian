@@ -1,4 +1,5 @@
 ---
+template: "Tech Template"
 categories:
   - "[[Tech]]"
 url:

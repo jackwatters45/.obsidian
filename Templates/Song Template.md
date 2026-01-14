@@ -1,4 +1,5 @@
 ---
+template: "Song Template"
 categories:
   - "[[Songs]]"
 artist: ""

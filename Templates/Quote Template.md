@@ -1,4 +1,5 @@
 ---
+template: "Quote Template"
 categories:
   - "[[Quotes]]"
 attribution: []

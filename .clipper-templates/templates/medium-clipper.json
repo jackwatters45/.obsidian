@@ -6,17 +6,17 @@
 	"properties": [
 		{
 			"name": "categories",
-			"value": "",
+			"value": "\"[[Clippings]]\"",
 			"type": "multitext"
 		},
 		{
 			"name": "author",
-			"value": "{{selector:meta[name='author']:content|wikilink}}",
+			"value": "{{selector:meta[name='author']?content|wikilink}}",
 			"type": "multitext"
 		},
 		{
 			"name": "publication",
-			"value": "{{selector:meta[property='og:site_name']:content}}",
+			"value": "{{selector:meta[property='og:site_name']?content}}",
 			"type": "text"
 		},
 		{
@@ -25,13 +25,8 @@
 			"type": "text"
 		},
 		{
-			"name": "claps",
-			"value": "",
-			"type": "number"
-		},
-		{
 			"name": "published",
-			"value": "{{selector:meta[property='article:published_time']:content|date:YYYY-MM-DD}}",
+			"value": "{{selector:meta[property='article:published_time']?content|date:YYYY-MM-DD}}",
 			"type": "date"
 		},
 		{
@@ -41,18 +36,19 @@
 		},
 		{
 			"name": "topics",
-			"value": "",
+			"value": "{{selector:a[href*='/tag/']|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
 			"name": "tags",
-			"value": "medium, articles",
+			"value": "medium, clippings",
 			"type": "multitext"
 		}
 	],
 	"triggers": [
-		"/\\.medium\\.com\\//"
+		"/\\.medium\\.com\\//",
+		"medium.com/@"
 	],
-	"noteNameFormat": "{{selector:meta[property='og:title']:content}}",
+	"noteNameFormat": "{{selector:meta[property='og:title']?content}}",
 	"path": "Clippings"
 }

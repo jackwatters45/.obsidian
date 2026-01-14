@@ -1,63 +1,58 @@
 {
-	"schemaVersion": "0.1.0",
-	"name": "NYT Cooking",
-	"behavior": "create",
-	"noteContentFormat": "{{schema:description}}\n\n## Ingredients\n\n{{schema:recipeIngredient|list}}\n\n## Instructions\n\n{{schema:recipeInstructions[*].text|list:numbered}}",
-	"properties": [
-		{
-			"name": "categories",
-			"value": "[[Recipes]]",
-			"type": "multitext"
-		},
-		{
-			"name": "author",
-			"value": "{{schema:author.name|wikilink}}",
-			"type": "multitext"
-		},
-		{
-			"name": "cuisine",
-			"value": "",
-			"type": "multitext"
-		},
-		{
-			"name": "type",
-			"value": "",
-			"type": "multitext"
-		},
-		{
-			"name": "url",
-			"value": "{{url}}",
-			"type": "text"
-		},
-		{
-			"name": "image",
-			"value": "{{schema:image[0].url}}",
-			"type": "text"
-		},
-		{
-			"name": "rating",
-			"value": "",
-			"type": "number"
-		},
-		{
-			"name": "created",
-			"value": "{{date}}",
-			"type": "date"
-		},
-		{
-			"name": "last",
-			"value": "",
-			"type": "date"
-		},
-		{
-			"name": "tags",
-			"value": "nyt",
-			"type": "multitext"
-		}
-	],
-	"triggers": [
-		"https://cooking.nytimes.com/recipes/"
-	],
-	"noteNameFormat": "{{schema:name}}",
-	"path": "References"
+  "schemaVersion": "0.1.0",
+  "name": "NYT Cooking",
+  "behavior": "create",
+  "noteContentFormat": "{{schema:description}}\n\n## Ingredients\n\n{{schema:recipeIngredient|list}}\n\n## Instructions\n\n{{schema:recipeInstructions[*].text|list:numbered}}",
+  "properties": [
+    {
+      "name": "categories",
+      "value": "[[Recipes]]",
+      "type": "multitext"
+    },
+    {
+      "name": "author",
+      "value": "{{schema:author.name|wikilink}}",
+      "type": "multitext"
+    },
+    {
+      "name": "cuisine",
+      "value": "",
+      "type": "multitext"
+    },
+    {
+      "name": "type",
+      "value": "",
+      "type": "multitext"
+    },
+    {
+      "name": "url",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "image",
+      "value": "{{schema:image[0].url}}",
+      "type": "text"
+    },
+    {
+      "name": "rating",
+      "value": "",
+      "type": "number"
+    },
+    {
+      "name": "last",
+      "value": "",
+      "type": "date"
+    },
+    {
+      "name": "tags",
+      "value": "nyt",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [
+    "https://cooking.nytimes.com/recipes/"
+  ],
+  "noteNameFormat": "{{schema:name}}",
+  "path": "References"
 }

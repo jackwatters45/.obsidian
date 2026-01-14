@@ -1,63 +1,58 @@
 {
-	"schemaVersion": "0.1.0",
-	"name": "GitHub Repo",
-	"behavior": "create",
-	"noteContentFormat": "",
-	"properties": [
-		{
-			"name": "categories",
-			"value": "[[GitHub]]",
-			"type": "multitext"
-		},
-		{
-			"name": "author",
-			"value": "{{url|split:\\\"/\\\"|slice:3,4|wikilink}}",
-			"type": "multitext"
-		},
-		{
-			"name": "languages",
-			"value": "{{selector:li.d-inline span.text-bold|join}}",
-			"type": "multitext"
-		},
-		{
-			"name": "stars",
-			"value": "{{selector:#repo-stars-counter-star}}",
-			"type": "text"
-		},
-		{
-			"name": "github url",
-			"value": "{{url}}",
-			"type": "text"
-		},
-		{
-			"name": "url",
-			"value": "",
-			"type": "multitext"
-		},
-		{
-			"name": "description",
-			"value": "{{selector:.f4.my-3}}",
-			"type": "text"
-		},
-		{
-			"name": "topics",
-			"value": "{{selector:.topic-tag|wikilink|join}}",
-			"type": "multitext"
-		},
-		{
-			"name": "created",
-			"value": "{{date}}",
-			"type": "date"
-		},
-		{
-			"name": "tags",
-			"value": "coding",
-			"type": "multitext"
-		}
-	],
-	"triggers": [
-		"/^https:\\/\\/github\\.com\\/[^\\/]+\\/[^\\/]+\\/?$/"
-	],
-	"noteNameFormat": "{{selector:strong[itemprop='name'] a}}",
-	"path": "Clippings"
+  "schemaVersion": "0.1.0",
+  "name": "GitHub Repo",
+  "behavior": "create",
+  "noteContentFormat": "",
+  "properties": [
+    {
+      "name": "categories",
+      "value": "[[GitHub]]",
+      "type": "multitext"
+    },
+    {
+      "name": "author",
+      "value": "{{url|split:\\\"/\\\"|slice:3,4|wikilink}}",
+      "type": "multitext"
+    },
+    {
+      "name": "languages",
+      "value": "{{selector:li.d-inline span.text-bold|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "stars",
+      "value": "{{selector:#repo-stars-counter-star}}",
+      "type": "text"
+    },
+    {
+      "name": "github url",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "url",
+      "value": "",
+      "type": "multitext"
+    },
+    {
+      "name": "description",
+      "value": "{{selector:.f4.my-3}}",
+      "type": "text"
+    },
+    {
+      "name": "topics",
+      "value": "{{selector:.topic-tag|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "tags",
+      "value": "coding",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [
+    "/^https:\\/\\/github\\.com\\/[^\\/]+\\/[^\\/]+\\/?$/"
+  ],
+  "noteNameFormat": "{{selector:strong[itemprop='name'] a}}",
+  "path": "Clippings"
 }

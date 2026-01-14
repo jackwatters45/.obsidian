@@ -8,7 +8,6 @@ ingredients:
 author: []
 url:
 rating:
-created: {{date}}
 last: {{date}}
 tags: []
 ---

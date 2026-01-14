@@ -25,7 +25,7 @@ views:
       - language
       - genre
       - finished
-      - created
+      - file.ctime
     sort:
       - property: file.name
         direction: ASC

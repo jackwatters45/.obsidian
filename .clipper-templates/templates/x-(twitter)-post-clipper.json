@@ -1,48 +1,43 @@
 {
-	"schemaVersion": "0.1.0",
-	"name": "X (Twitter) Post",
-	"behavior": "create",
-	"noteContentFormat": "![x.com]({{url}})",
-	"properties": [
-		{
-			"name": "categories",
-			"value": "",
-			"type": "multitext"
-		},
-		{
-			"name": "url",
-			"value": "{{url}}",
-			"type": "multitext"
-		},
-		{
-			"name": "author",
-			"value": "{{url|split:\\\"/\\\"|slice:3,-2}}",
-			"type": "multitext"
-		},
-		{
-			"name": "published",
-			"value": "{{published}}",
-			"type": "date"
-		},
-		{
-			"name": "image",
-			"value": "{{selector:img[alt=\\\"Image\\\"]?src|first}}",
-			"type": "text"
-		},
-		{
-			"name": "created",
-			"value": "{{date}}",
-			"type": "date"
-		},
-		{
-			"name": "tags",
-			"value": "twitter, articles",
-			"type": "multitext"
-		}
-	],
-	"triggers": [
-		"/^https:\\/\\/x\\.com\\/[A-Za-z0-9_]+\\/status\\/\\d+$/"
-	],
-	"noteNameFormat": "{{url|split:\"/\"|slice:3,-2}}",
-	"path": "Clippings"
+  "schemaVersion": "0.1.0",
+  "name": "X (Twitter) Post",
+  "behavior": "create",
+  "noteContentFormat": "![x.com]({{url}})",
+  "properties": [
+    {
+      "name": "categories",
+      "value": "",
+      "type": "multitext"
+    },
+    {
+      "name": "url",
+      "value": "{{url}}",
+      "type": "multitext"
+    },
+    {
+      "name": "author",
+      "value": "{{url|split:\\\"/\\\"|slice:3,-2}}",
+      "type": "multitext"
+    },
+    {
+      "name": "published",
+      "value": "{{published}}",
+      "type": "date"
+    },
+    {
+      "name": "image",
+      "value": "{{selector:img[alt=\\\"Image\\\"]?src|first}}",
+      "type": "text"
+    },
+    {
+      "name": "tags",
+      "value": "twitter, articles",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [
+    "/^https:\\/\\/x\\.com\\/[A-Za-z0-9_]+\\/status\\/\\d+$/"
+  ],
+  "noteNameFormat": "{{url|split:\"/\"|slice:3,-2}}",
+  "path": "Clippings"
 }

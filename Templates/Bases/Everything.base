@@ -1,6 +1,6 @@
 formulas:
   Embeds: if(file.embeds[0].containsAny("jpg","gif","webp","jpeg","avif"), file.embeds[0])
-  Date: if(created,created,if(start,start))
+  Date: if(file.ctime,file.ctime,if(start,start))
 views:
   - type: table
     name: All files

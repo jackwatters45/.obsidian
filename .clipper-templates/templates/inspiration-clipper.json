@@ -1,46 +1,41 @@
 {
-	"schemaVersion": "0.1.0",
-	"name": "Inspiration",
-	"behavior": "create",
-	"noteContentFormat": "",
-	"properties": [
-		{
-			"name": "categories",
-			"value": "[[Inspiration]]",
-			"type": "multitext"
-		},
-		{
-			"name": "type",
-			"value": "",
-			"type": "multitext"
-		},
-		{
-			"name": "image",
-			"value": "{{image}}",
-			"type": "text"
-		},
-		{
-			"name": "url",
-			"value": "{{url}}",
-			"type": "text"
-		},
-		{
-			"name": "description",
-			"value": "",
-			"type": "text"
-		},
-		{
-			"name": "created",
-			"value": "{{date}}",
-			"type": "date"
-		},
-		{
-			"name": "tags",
-			"value": "",
-			"type": "multitext"
-		}
-	],
-	"triggers": [],
-	"noteNameFormat": "{{title}}",
-	"path": "Clippings"
+  "schemaVersion": "0.1.0",
+  "name": "Inspiration",
+  "behavior": "create",
+  "noteContentFormat": "",
+  "properties": [
+    {
+      "name": "categories",
+      "value": "[[Inspiration]]",
+      "type": "multitext"
+    },
+    {
+      "name": "type",
+      "value": "",
+      "type": "multitext"
+    },
+    {
+      "name": "image",
+      "value": "{{image}}",
+      "type": "text"
+    },
+    {
+      "name": "url",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "description",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "name": "tags",
+      "value": "",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [],
+  "noteNameFormat": "{{title}}",
+  "path": "Clippings"
 }

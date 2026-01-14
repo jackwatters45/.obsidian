@@ -11,6 +11,5 @@ description:
 industry: []
 size:
 loc: []
-created: {{date}}
 tags: []
 ---

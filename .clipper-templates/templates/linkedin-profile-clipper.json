@@ -1,63 +1,58 @@
 {
-	"schemaVersion": "0.1.0",
-	"name": "LinkedIn Profile",
-	"behavior": "create",
-	"noteContentFormat": "{{selector:div.display-flex.ph5.pv3 span[aria-hidden]}}",
-	"properties": [
-		{
-			"name": "categories",
-			"value": "[[People]]",
-			"type": "multitext"
-		},
-		{
-			"name": "org",
-			"value": "{{selector:button[aria-label^=\"Current company\"]|wikilink}}",
-			"type": "multitext"
-		},
-		{
-			"name": "role",
-			"value": "{{selector:li.artdeco-list__item .t-bold span[aria-hidden=\"true\"]|first}}",
-			"type": "text"
-		},
-		{
-			"name": "loc",
-			"value": "{{selector:span.text-body-small.inline}}",
-			"type": "text"
-		},
-		{
-			"name": "linkedin",
-			"value": "{{url}}",
-			"type": "text"
-		},
-		{
-			"name": "url",
-			"value": "",
-			"type": "text"
-		},
-		{
-			"name": "school",
-			"value": "{{selector:button[aria-label^=\"Education\"]|wikilink}}",
-			"type": "multitext"
-		},
-		{
-			"name": "image",
-			"value": "{{selector:button[aria-label*=\"profile picture\"] img?src}}",
-			"type": "text"
-		},
-		{
-			"name": "created",
-			"value": "{{date}}",
-			"type": "date"
-		},
-		{
-			"name": "tags",
-			"value": "linkedin",
-			"type": "multitext"
-		}
-	],
-	"triggers": [
-		"https://www.linkedin.com/in/"
-	],
-	"noteNameFormat": "{{selector:h1}}",
-	"path": "References"
+  "schemaVersion": "0.1.0",
+  "name": "LinkedIn Profile",
+  "behavior": "create",
+  "noteContentFormat": "{{selector:div.display-flex.ph5.pv3 span[aria-hidden]}}",
+  "properties": [
+    {
+      "name": "categories",
+      "value": "[[People]]",
+      "type": "multitext"
+    },
+    {
+      "name": "org",
+      "value": "{{selector:button[aria-label^=\"Current company\"]|wikilink}}",
+      "type": "multitext"
+    },
+    {
+      "name": "role",
+      "value": "{{selector:li.artdeco-list__item .t-bold span[aria-hidden=\"true\"]|first}}",
+      "type": "text"
+    },
+    {
+      "name": "loc",
+      "value": "{{selector:span.text-body-small.inline}}",
+      "type": "text"
+    },
+    {
+      "name": "linkedin",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "url",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "name": "school",
+      "value": "{{selector:button[aria-label^=\"Education\"]|wikilink}}",
+      "type": "multitext"
+    },
+    {
+      "name": "image",
+      "value": "{{selector:button[aria-label*=\"profile picture\"] img?src}}",
+      "type": "text"
+    },
+    {
+      "name": "tags",
+      "value": "linkedin",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [
+    "https://www.linkedin.com/in/"
+  ],
+  "noteNameFormat": "{{selector:h1}}",
+  "path": "References"
 }

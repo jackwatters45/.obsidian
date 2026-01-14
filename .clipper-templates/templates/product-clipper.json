@@ -1,43 +1,38 @@
 {
-	"schemaVersion": "0.1.0",
-	"name": "Product",
-	"behavior": "create",
-	"noteContentFormat": "{{description}}",
-	"properties": [
-		{
-			"name": "categories",
-			"value": "[[Products]]",
-			"type": "multitext"
-		},
-		{
-			"name": "created",
-			"value": "{{date}}",
-			"type": "date"
-		},
-		{
-			"name": "description",
-			"value": "{{description}}",
-			"type": "text"
-		},
-		{
-			"name": "url",
-			"value": "{{url}}",
-			"type": "text"
-		},
-		{
-			"name": "price",
-			"value": "{{meta:property:product:price:amount}}",
-			"type": "number"
-		},
-		{
-			"name": "image",
-			"value": "{{image}}",
-			"type": "text"
-		}
-	],
-	"triggers": [
-		"schema:@Product"
-	],
-	"noteNameFormat": "{{title}}",
-	"path": "Clippings"
+  "schemaVersion": "0.1.0",
+  "name": "Product",
+  "behavior": "create",
+  "noteContentFormat": "{{description}}",
+  "properties": [
+    {
+      "name": "categories",
+      "value": "[[Products]]",
+      "type": "multitext"
+    },
+    {
+      "name": "description",
+      "value": "{{description}}",
+      "type": "text"
+    },
+    {
+      "name": "url",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "price",
+      "value": "{{meta:property:product:price:amount}}",
+      "type": "number"
+    },
+    {
+      "name": "image",
+      "value": "{{image}}",
+      "type": "text"
+    }
+  ],
+  "triggers": [
+    "schema:@Product"
+  ],
+  "noteNameFormat": "{{title}}",
+  "path": "Clippings"
 }

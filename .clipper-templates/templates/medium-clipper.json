@@ -1,54 +1,49 @@
 {
-	"schemaVersion": "0.1.0",
-	"name": "Medium",
-	"behavior": "create",
-	"noteContentFormat": "{{content}}",
-	"properties": [
-		{
-			"name": "categories",
-			"value": "\"[[Clippings]]\"",
-			"type": "multitext"
-		},
-		{
-			"name": "author",
-			"value": "{{selector:meta[name='author']?content|wikilink}}",
-			"type": "multitext"
-		},
-		{
-			"name": "publication",
-			"value": "{{selector:meta[property='og:site_name']?content}}",
-			"type": "text"
-		},
-		{
-			"name": "url",
-			"value": "{{url}}",
-			"type": "text"
-		},
-		{
-			"name": "published",
-			"value": "{{selector:meta[property='article:published_time']?content|date:YYYY-MM-DD}}",
-			"type": "date"
-		},
-		{
-			"name": "created",
-			"value": "{{date}}",
-			"type": "date"
-		},
-		{
-			"name": "topics",
-			"value": "{{selector:a[href*='/tag/']|wikilink|join}}",
-			"type": "multitext"
-		},
-		{
-			"name": "tags",
-			"value": "medium, clippings",
-			"type": "multitext"
-		}
-	],
-	"triggers": [
-		"/\\.medium\\.com\\//",
-		"medium.com/@"
-	],
-	"noteNameFormat": "{{selector:meta[property='og:title']?content}}",
-	"path": "Clippings"
+  "schemaVersion": "0.1.0",
+  "name": "Medium",
+  "behavior": "create",
+  "noteContentFormat": "{{content}}",
+  "properties": [
+    {
+      "name": "categories",
+      "value": "\"[[Clippings]]\"",
+      "type": "multitext"
+    },
+    {
+      "name": "author",
+      "value": "{{selector:meta[name='author']?content|wikilink}}",
+      "type": "multitext"
+    },
+    {
+      "name": "publication",
+      "value": "{{selector:meta[property='og:site_name']?content}}",
+      "type": "text"
+    },
+    {
+      "name": "url",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "published",
+      "value": "{{selector:meta[property='article:published_time']?content|date:YYYY-MM-DD}}",
+      "type": "date"
+    },
+    {
+      "name": "topics",
+      "value": "{{selector:a[href*='/tag/']|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "tags",
+      "value": "medium, clippings",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [
+    "/\\.medium\\.com\\//",
+    "medium.com/@"
+  ],
+  "noteNameFormat": "{{selector:meta[property='og:title']?content}}",
+  "path": "Clippings"
 }

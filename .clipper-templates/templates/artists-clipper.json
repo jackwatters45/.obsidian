@@ -1,0 +1,36 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Artists",
+	"behavior": "create",
+	"noteContentFormat": "{{selectorHtml:#mw-content-text|remove_html:(\".navbox,.printfooter,.side-box\")|markdown}}",
+	"properties": [
+		{
+			"name": "categories",
+			"value": "\"[[Artists]]\"",
+			"type": "multitext"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "genre",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "artists",
+			"type": "multitext"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "{{title}}",
+	"path": "Clippings"
+}

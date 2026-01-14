@@ -56,12 +56,12 @@
 		},
 		{
 			"name": "startYear",
-			"value": "{{selector:a[href*=\"releaseinfo\"]|split:\"–\"|first}}",
+			"value": "{{selector:a[href*=\"releaseinfo\"]|first|split:\"–\"|first}}",
 			"type": "number"
 		},
 		{
 			"name": "endYear",
-			"value": "{{selector:a[href*=\"releaseinfo\"]|split:\"–\"|last}}",
+			"value": "{{selector:a[href*=\"releaseinfo\"]|first|split:\"–\"|last}}",
 			"type": "number"
 		},
 		{

@@ -2,7 +2,9 @@
 categories:
   - "[[Shows]]"
 genre: []
-year:
+description:
+startYear:
+endYear:
 cast: []
 rating:
 scoreIMDb:

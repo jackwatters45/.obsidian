@@ -11,4 +11,4 @@ tags:
 ---
 ## Episodes
 
-[[Podcast episodes.base#Show]]
+![[Podcast episodes.base#Show]]

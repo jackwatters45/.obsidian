@@ -11,7 +11,7 @@
 		},
 		{
 			"name": "author",
-			"value": "{{url|split:\"/\"|slice:3,4|wikilink}}",
+			"value": "{{url|split:\\\"/\\\"|slice:3,4|wikilink}}",
 			"type": "multitext"
 		},
 		{
@@ -25,9 +25,14 @@
 			"type": "text"
 		},
 		{
-			"name": "url",
+			"name": "github url",
 			"value": "{{url}}",
 			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "",
+			"type": "multitext"
 		},
 		{
 			"name": "description",

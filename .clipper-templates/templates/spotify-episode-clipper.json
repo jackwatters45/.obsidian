@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Spotify Episode",
 	"behavior": "create",
-	"noteContentFormat": "{{selector:meta[property='og:description']:content}}",
+	"noteContentFormat": "\n{{selector:.E2n7712eD3DDp5CyH_sQ|first}}",
 	"properties": [
 		{
 			"name": "categories",
@@ -11,7 +11,7 @@
 		},
 		{
 			"name": "show",
-			"value": "",
+			"value": "{{selector:[data-testid=\\\"showTitle\\\"]|wikilink}}",
 			"type": "multitext"
 		},
 		{
@@ -25,24 +25,19 @@
 			"type": "multitext"
 		},
 		{
-			"name": "episode",
-			"value": "",
-			"type": "number"
-		},
-		{
 			"name": "url",
 			"value": "{{url}}",
-			"type": "text"
-		},
-		{
-			"name": "cover",
-			"value": "{{selector:meta[property='og:image']:content}}",
-			"type": "text"
+			"type": "multitext"
 		},
 		{
 			"name": "published",
-			"value": "{{selector:meta[name='music:release_date']:content}}",
+			"value": "{{selector:.QMFXRnzqSLyffxlVjc5L|first}}",
 			"type": "date"
+		},
+		{
+			"name": "runtime",
+			"value": "{{selector:.ccqn2ecT3axu6r2mw0O5|first}}",
+			"type": "text"
 		},
 		{
 			"name": "created",
@@ -68,6 +63,6 @@
 	"triggers": [
 		"https://open.spotify.com/episode/"
 	],
-	"noteNameFormat": "{{selector:meta[property='og:title']:content}}",
+	"noteNameFormat": "{{selector:[data-testid=\"episodeTitle\"]|wikilink}}",
 	"path": "References"
 }

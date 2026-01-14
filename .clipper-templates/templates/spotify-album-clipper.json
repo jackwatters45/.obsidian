@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Spotify Album",
 	"behavior": "create",
-	"noteContentFormat": "",
+	"noteContentFormat": "{{selector:[data-testid=\"internal-track-link\"]|wikilink|join:\\n}}",
 	"properties": [
 		{
 			"name": "categories",
@@ -10,8 +10,13 @@
 			"type": "multitext"
 		},
 		{
+			"name": "artistUrl",
+			"value": "https://open.spotify.com{{selector:[data-testid=\\\"creator-link\\\"]?href}}",
+			"type": "multitext"
+		},
+		{
 			"name": "artist",
-			"value": "{{selector:meta[name='music:musician']:content|wikilink}}",
+			"value": "{{selector:[data-testid=\\\"creator-link\\\"]|wikilink}}",
 			"type": "multitext"
 		},
 		{
@@ -21,18 +26,18 @@
 		},
 		{
 			"name": "year",
-			"value": "{{selector:meta[name='music:release_date']:content|date:YYYY}}",
+			"value": "{{selector:[data-testid=\\\"release-date\\\"]}}",
 			"type": "number"
 		},
 		{
 			"name": "cover",
-			"value": "{{selector:meta[property='og:image']:content}}",
+			"value": "{{selector:.bFtVZZnZgTWjjyzkPA5k img?src}}",
 			"type": "text"
 		},
 		{
 			"name": "url",
 			"value": "{{url}}",
-			"type": "text"
+			"type": "multitext"
 		},
 		{
 			"name": "created",
@@ -53,6 +58,6 @@
 	"triggers": [
 		"https://open.spotify.com/album/"
 	],
-	"noteNameFormat": "{{selector:meta[property='og:title']:content}}",
+	"noteNameFormat": "{{selector:[data-testid=\"entityTitle\"]}}",
 	"path": "References"
 }

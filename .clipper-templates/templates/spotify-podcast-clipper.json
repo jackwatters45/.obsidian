@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Spotify Podcast",
 	"behavior": "create",
-	"noteContentFormat": "{{selector:meta[property='og:description']:content}}",
+	"noteContentFormat": "## Episodes\n\n![[Podcast episodes.base#Show]]",
 	"properties": [
 		{
 			"name": "categories",
@@ -16,17 +16,17 @@
 		},
 		{
 			"name": "cover",
-			"value": "{{selector:meta[property='og:image']:content}}",
+			"value": "{{selector:.bFtVZZnZgTWjjyzkPA5k img?src}}",
 			"type": "text"
 		},
 		{
 			"name": "url",
 			"value": "{{url}}",
-			"type": "text"
+			"type": "multitext"
 		},
 		{
 			"name": "description",
-			"value": "{{selector:meta[property='og:description']:content}}",
+			"value": "{{selector:.lykOktr3YIn79xOvVQtS}}",
 			"type": "text"
 		},
 		{
@@ -48,6 +48,6 @@
 	"triggers": [
 		"https://open.spotify.com/show/"
 	],
-	"noteNameFormat": "{{selector:meta[property='og:title']:content}}",
+	"noteNameFormat": "{{selector:[data-testid=\"show-title\"]}}",
 	"path": "References"
 }

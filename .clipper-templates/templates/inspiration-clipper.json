@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Inspiration",
 	"behavior": "create",
-	"noteContentFormat": "{{content}}",
+	"noteContentFormat": "",
 	"properties": [
 		{
 			"name": "categories",

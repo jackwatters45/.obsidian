@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "X (Twitter) Post",
 	"behavior": "create",
-	"noteContentFormat": "![x.com]({{url}})\n\n## Post Text\n\n{{selector:[data-testid=\"tweetText\"]}}\n\n## Image Previews\n\n{{selector:img[alt=\"Image\"]?src|image:\"\"}}\n\n",
+	"noteContentFormat": "![x.com]({{url}})",
 	"properties": [
 		{
 			"name": "categories",
@@ -16,11 +16,6 @@
 		},
 		{
 			"name": "author",
-			"value": "{{title|split:\\\" on X: \\\"|first}}",
-			"type": "multitext"
-		},
-		{
-			"name": "handle",
 			"value": "{{url|split:\\\"/\\\"|slice:3,-2}}",
 			"type": "text"
 		},

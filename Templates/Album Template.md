@@ -10,6 +10,5 @@ cover: ""
 rating:
 tags:
   - music
-created: {{date}}
 ---
 

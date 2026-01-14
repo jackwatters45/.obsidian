@@ -4,7 +4,7 @@ filters:
 formulas:
   Path: file.path
 properties:
-  note.created:
+  file.ctime:
     displayName: Date
   file.name:
     displayName: Title
@@ -16,16 +16,16 @@ views:
     order:
       - file.name
       - categories
-      - created
+      - file.ctime
     sort:
-      - property: created
+      - property: file.ctime
         direction: DESC
   - type: table
     name: Recent entries
     order:
       - file.name
-      - created
+      - file.ctime
     sort:
-      - property: created
+      - property: file.ctime
         direction: DESC
     limit: 20

@@ -3,7 +3,6 @@ template: "Musician Template"
 categories: "[[People]]"
 type:
   - "[[Musicians]]"
-created: {{date}}
 tags: []
 ---
 ## Albums

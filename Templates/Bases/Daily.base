@@ -1,16 +1,20 @@
 filters:
-  or:
-    - file.name.contains(this.file.name)
-    - created.toString().contains(this.file.name)
-    - start.toString().contains(this.file.name)
-    - end.toString().contains(this.file.name)
-    - file.links.contains(this.file)
+  and:
+    - '!file.inFolder("Templates")'
+    - '!file.inFolder("Categories")'
+    - or:
+        - file.name.contains(this.file.name)
+        - file.ctime.toString().contains(this.file.name)
+        - file.mtime.toString().contains(this.file.name)
+        - start.toString().contains(this.file.name)
+        - end.toString().contains(this.file.name)
+        - file.links.contains(this.file)
 properties:
   file.name:
     displayName: Entry
   note.categories:
     displayName: Categories
-  note.created:
+  file.ctime:
     displayName: Created
   note.tags:
     displayName: Tags
@@ -22,13 +26,13 @@ views:
         - '!file.inFolder("Daily")'
     order:
       - file.name
-      - created
+      - file.ctime
       - categories
       - tags
     sort:
       - property: tags
         direction: ASC
-      - property: created
+      - property: file.ctime
         direction: DESC
       - property: file.name
         direction: ASC
@@ -36,7 +40,7 @@ views:
         direction: ASC
     columnSize:
       file.name: 287
-      note.created: 128
+      file.ctime: 128
       note.categories: 119
   - type: table
     name: Yearly
@@ -46,9 +50,9 @@ views:
     order:
       - file.name
       - categories
-      - created
+      - file.ctime
     sort:
-      - property: created
+      - property: file.ctime
         direction: ASC
   - type: table
     name: Weekly
@@ -58,7 +62,7 @@ views:
     order:
       - file.name
       - categories
-      - created
+      - file.ctime
     sort:
       - property: file.name
         direction: ASC
@@ -70,13 +74,13 @@ views:
         - '!file.inFolder("Weekly")'
         - or:
             - 'date(this.start) && date(this.end) && date(file.basename) >= date(this.start) && date(file.basename) <= date(this.end)'
-            - 'date(this.start) && date(this.end) && created >= date(this.start) && created <= date(this.end)'
+            - 'date(this.start) && date(this.end) && file.ctime >= date(this.start) && file.ctime <= date(this.end)'
             - 'file.links.contains(this.file)'
     order:
       - file.name
       - categories
-      - created
+      - file.ctime
       - tags
     sort:
-      - property: created
+      - property: file.ctime
         direction: DESC

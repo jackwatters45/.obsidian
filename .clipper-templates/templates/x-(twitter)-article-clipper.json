@@ -1,43 +1,38 @@
 {
-	"schemaVersion": "0.1.0",
-	"name": "X (Twitter) Article",
-	"behavior": "create",
-	"noteContentFormat": "{{content}}",
-	"properties": [
-		{
-			"name": "categories",
-			"value": "",
-			"type": "multitext"
-		},
-		{
-			"name": "url",
-			"value": "{{url}}",
-			"type": "text"
-		},
-		{
-			"name": "author",
-			"value": "{{url|split:\"/\"|slice:3,4}}",
-			"type": "multitext"
-		},
-		{
-			"name": "published",
-			"value": "{{published}}",
-			"type": "date"
-		},
-		{
-			"name": "created",
-			"value": "{{date}}",
-			"type": "date"
-		},
-		{
-			"name": "tags",
-			"value": "twitter, articles",
-			"type": "multitext"
-		}
-	],
-	"triggers": [
-		"/^https:\\/\\/x\\.com\\/[A-Za-z0-9_]+\\/article\\/\\d+$/"
-	],
-	"noteNameFormat": "{{selector:[data-testid=\"twitter-article-title\"]}}",
-	"path": "Clippings"
+  "schemaVersion": "0.1.0",
+  "name": "X (Twitter) Article",
+  "behavior": "create",
+  "noteContentFormat": "{{content}}",
+  "properties": [
+    {
+      "name": "categories",
+      "value": "",
+      "type": "multitext"
+    },
+    {
+      "name": "url",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "author",
+      "value": "{{url|split:\"/\"|slice:3,4}}",
+      "type": "multitext"
+    },
+    {
+      "name": "published",
+      "value": "{{published}}",
+      "type": "date"
+    },
+    {
+      "name": "tags",
+      "value": "twitter, articles",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [
+    "/^https:\\/\\/x\\.com\\/[A-Za-z0-9_]+\\/article\\/\\d+$/"
+  ],
+  "noteNameFormat": "{{selector:[data-testid=\"twitter-article-title\"]}}",
+  "path": "Clippings"
 }

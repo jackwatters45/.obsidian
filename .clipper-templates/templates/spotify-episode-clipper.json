@@ -1,68 +1,63 @@
 {
-	"schemaVersion": "0.1.0",
-	"name": "Spotify Episode",
-	"behavior": "create",
-	"noteContentFormat": "\n{{selector:.E2n7712eD3DDp5CyH_sQ|first}}",
-	"properties": [
-		{
-			"name": "categories",
-			"value": "[[Podcast episodes]]",
-			"type": "multitext"
-		},
-		{
-			"name": "show",
-			"value": "{{selector:[data-testid=\\\"showTitle\\\"]|wikilink}}",
-			"type": "multitext"
-		},
-		{
-			"name": "guests",
-			"value": "",
-			"type": "multitext"
-		},
-		{
-			"name": "topics",
-			"value": "",
-			"type": "multitext"
-		},
-		{
-			"name": "url",
-			"value": "{{url}}",
-			"type": "multitext"
-		},
-		{
-			"name": "published",
-			"value": "{{selector:.QMFXRnzqSLyffxlVjc5L|first}}",
-			"type": "date"
-		},
-		{
-			"name": "runtime",
-			"value": "{{selector:.ccqn2ecT3axu6r2mw0O5|first}}",
-			"type": "text"
-		},
-		{
-			"name": "created",
-			"value": "{{date}}",
-			"type": "date"
-		},
-		{
-			"name": "last",
-			"value": "",
-			"type": "date"
-		},
-		{
-			"name": "rating",
-			"value": "",
-			"type": "number"
-		},
-		{
-			"name": "tags",
-			"value": "podcasts",
-			"type": "multitext"
-		}
-	],
-	"triggers": [
-		"https://open.spotify.com/episode/"
-	],
-	"noteNameFormat": "{{selector:[data-testid=\"episodeTitle\"]|wikilink}}",
-	"path": "References"
+  "schemaVersion": "0.1.0",
+  "name": "Spotify Episode",
+  "behavior": "create",
+  "noteContentFormat": "\n{{selector:.E2n7712eD3DDp5CyH_sQ|first}}",
+  "properties": [
+    {
+      "name": "categories",
+      "value": "[[Podcast episodes]]",
+      "type": "multitext"
+    },
+    {
+      "name": "show",
+      "value": "{{selector:[data-testid=\\\"showTitle\\\"]|wikilink}}",
+      "type": "multitext"
+    },
+    {
+      "name": "guests",
+      "value": "",
+      "type": "multitext"
+    },
+    {
+      "name": "topics",
+      "value": "",
+      "type": "multitext"
+    },
+    {
+      "name": "url",
+      "value": "{{url}}",
+      "type": "multitext"
+    },
+    {
+      "name": "published",
+      "value": "{{selector:.QMFXRnzqSLyffxlVjc5L|first}}",
+      "type": "date"
+    },
+    {
+      "name": "runtime",
+      "value": "{{selector:.ccqn2ecT3axu6r2mw0O5|first}}",
+      "type": "text"
+    },
+    {
+      "name": "last",
+      "value": "",
+      "type": "date"
+    },
+    {
+      "name": "rating",
+      "value": "",
+      "type": "number"
+    },
+    {
+      "name": "tags",
+      "value": "podcasts",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [
+    "https://open.spotify.com/episode/"
+  ],
+  "noteNameFormat": "{{selector:[data-testid=\"episodeTitle\"]|wikilink}}",
+  "path": "References"
 }

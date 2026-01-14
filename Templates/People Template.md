@@ -12,7 +12,6 @@ url:
 image:
 role:
 loc:
-created: {{date}}
 met:
 last contact:
 tags: []

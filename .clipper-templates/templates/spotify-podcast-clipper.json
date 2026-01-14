@@ -1,53 +1,48 @@
 {
-	"schemaVersion": "0.1.0",
-	"name": "Spotify Podcast",
-	"behavior": "create",
-	"noteContentFormat": "## Episodes\n\n![[Podcast episodes.base#Show]]",
-	"properties": [
-		{
-			"name": "categories",
-			"value": "[[Podcasts]]",
-			"type": "multitext"
-		},
-		{
-			"name": "host",
-			"value": "",
-			"type": "multitext"
-		},
-		{
-			"name": "cover",
-			"value": "{{selector:.bFtVZZnZgTWjjyzkPA5k img?src}}",
-			"type": "text"
-		},
-		{
-			"name": "url",
-			"value": "{{url}}",
-			"type": "multitext"
-		},
-		{
-			"name": "description",
-			"value": "{{selector:.lykOktr3YIn79xOvVQtS}}",
-			"type": "text"
-		},
-		{
-			"name": "created",
-			"value": "{{date}}",
-			"type": "date"
-		},
-		{
-			"name": "rating",
-			"value": "",
-			"type": "number"
-		},
-		{
-			"name": "tags",
-			"value": "podcasts",
-			"type": "multitext"
-		}
-	],
-	"triggers": [
-		"https://open.spotify.com/show/"
-	],
-	"noteNameFormat": "{{selector:[data-testid=\"show-title\"]}}",
-	"path": "References"
+  "schemaVersion": "0.1.0",
+  "name": "Spotify Podcast",
+  "behavior": "create",
+  "noteContentFormat": "## Episodes\n\n![[Podcast episodes.base#Show]]",
+  "properties": [
+    {
+      "name": "categories",
+      "value": "[[Podcasts]]",
+      "type": "multitext"
+    },
+    {
+      "name": "host",
+      "value": "",
+      "type": "multitext"
+    },
+    {
+      "name": "cover",
+      "value": "{{selector:.bFtVZZnZgTWjjyzkPA5k img?src}}",
+      "type": "text"
+    },
+    {
+      "name": "url",
+      "value": "{{url}}",
+      "type": "multitext"
+    },
+    {
+      "name": "description",
+      "value": "{{selector:.lykOktr3YIn79xOvVQtS}}",
+      "type": "text"
+    },
+    {
+      "name": "rating",
+      "value": "",
+      "type": "number"
+    },
+    {
+      "name": "tags",
+      "value": "podcasts",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [
+    "https://open.spotify.com/show/"
+  ],
+  "noteNameFormat": "{{selector:[data-testid=\"show-title\"]}}",
+  "path": "References"
 }

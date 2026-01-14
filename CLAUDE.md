@@ -55,7 +55,6 @@ scoreGr:             # Goodreads score
 rating:              # Personal rating
 language:            # Language(s)
 topics: []           # Related topics
-created:             # Date added (YYYY-MM-DD)
 finished:            # Date finished reading
 tags:
   - to-read          # or "reading", "books" when done
@@ -72,7 +71,6 @@ tags:
   - clippings
 author: []           # Article author(s)
 url: ""              # Source URL
-created:             # Date clipped
 published:           # Original publish date
 topics: []           # Related topics
 ---
@@ -103,7 +101,6 @@ linkedin:
 instagram:
 email:
 phone:
-created:
 met:                 # When first met
 last contact:        # Last interaction date
 ---
@@ -118,7 +115,6 @@ author: []           # Repo owner
 stars:               # Star count
 url:                 # Repo URL
 description:         # Repo description
-created:             # Date clipped
 tags:
   - coding
 ---

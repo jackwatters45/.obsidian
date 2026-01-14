@@ -11,7 +11,6 @@ scoreGr:
 rating:
 language:
 topics: []
-created: {{date}}
 finished:
 tags:
   - to-read

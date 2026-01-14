@@ -12,12 +12,12 @@
 		{
 			"name": "url",
 			"value": "{{url}}",
-			"type": "text"
+			"type": "multitext"
 		},
 		{
 			"name": "author",
 			"value": "{{url|split:\\\"/\\\"|slice:3,-2}}",
-			"type": "text"
+			"type": "multitext"
 		},
 		{
 			"name": "published",
@@ -43,6 +43,6 @@
 	"triggers": [
 		"/^https:\\/\\/x\\.com\\/[A-Za-z0-9_]+\\/status\\/\\d+$/"
 	],
-	"noteNameFormat": "@{{url|split:\"/\"|slice:3,-2}} on {{published|date:\"YYYY-MM-DD_HH-mm-ss\"}}",
+	"noteNameFormat": "{{url|split:\"/\"|slice:3,-2}}",
 	"path": "Clippings"
 }

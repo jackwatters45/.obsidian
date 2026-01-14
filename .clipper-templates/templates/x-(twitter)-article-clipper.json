@@ -16,13 +16,8 @@
 		},
 		{
 			"name": "author",
-			"value": "{{selector:a[role='link'][href*='/']:has(span):first|wikilink}}",
-			"type": "multitext"
-		},
-		{
-			"name": "handle",
 			"value": "{{url|split:\"/\"|slice:3,4}}",
-			"type": "text"
+			"type": "multitext"
 		},
 		{
 			"name": "published",

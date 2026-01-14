@@ -16,7 +16,7 @@
 		},
 		{
 			"name": "role",
-			"value": "{{selector:.text-body-medium}}",
+			"value": "{{selector:li.artdeco-list__item .t-bold span[aria-hidden=\"true\"]}}",
 			"type": "text"
 		},
 		{

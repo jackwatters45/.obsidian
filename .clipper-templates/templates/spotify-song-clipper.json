@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Spotify Song",
 	"behavior": "create",
-	"noteContentFormat": "",
+	"noteContentFormat": "\n## Lyrics\n\n {{selector:.erc19I_I0mbxunRRJq3B p|join:\\n}}",
 	"properties": [
 		{
 			"name": "categories",
@@ -11,22 +11,42 @@
 		},
 		{
 			"name": "artist",
-			"value": "{{selector:meta[name='music:musician']:content|wikilink}}",
+			"value": "{{selector:[data-testid=\\\"creator-link\\\"]|wikilink}}",
 			"type": "multitext"
 		},
 		{
+			"name": "artistUrl",
+			"value": "https://open.spotify.com{{selector:[data-testid=\\\"creator-link\\\"]?href}}",
+			"type": "text"
+		},
+		{
 			"name": "album",
-			"value": "{{selector:meta[name='music:album']:content|wikilink}}",
+			"value": "{{selector:a[href*=\\\"/album/\\\"]|first|wikilink}}",
 			"type": "multitext"
+		},
+		{
+			"name": "albumUrl",
+			"value": "https://open.spotify.com{{selector:a[href*=\\\"/album/\\\"]?href}}",
+			"type": "text"
 		},
 		{
 			"name": "url",
 			"value": "{{url}}",
+			"type": "multitext"
+		},
+		{
+			"name": "year",
+			"value": "{{selector:.gRs15KFAiBRH4FFbVvVr|slice:1,2}}",
+			"type": "number"
+		},
+		{
+			"name": "length",
+			"value": "{{selector:.gRs15KFAiBRH4FFbVvVr|slice:2,3}}",
 			"type": "text"
 		},
 		{
 			"name": "cover",
-			"value": "{{selector:meta[property='og:image']:content}}",
+			"value": "{{selector:.bFtVZZnZgTWjjyzkPA5k img?src}}",
 			"type": "text"
 		},
 		{
@@ -48,6 +68,6 @@
 	"triggers": [
 		"https://open.spotify.com/track/"
 	],
-	"noteNameFormat": "{{selector:meta[property='og:title']:content}}",
+	"noteNameFormat": "{{selector:[data-testid=\"entityTitle\"]}}",
 	"path": "References"
 }

@@ -16,7 +16,7 @@
 		},
 		{
 			"name": "url",
-			"value": "",
+			"value": "{{selector:.org-page-details-module__card-spacing dd a[href^=\"http\"]?href}}",
 			"type": "text"
 		},
 		{
@@ -31,27 +31,27 @@
 		},
 		{
 			"name": "image",
-			"value": "{{selector:meta[property='og:image']:content}}",
+			"value": "{{selector:img.org-top-card-primary-content__logo?src}}",
 			"type": "text"
 		},
 		{
 			"name": "description",
-			"value": "{{selector:meta[property='og:description']:content}}",
+			"value": "{{selector:p.break-words.white-space-pre-wrap}}",
 			"type": "text"
 		},
 		{
 			"name": "industry",
-			"value": "",
+			"value": "{{selector:.org-page-details-module__card-spacing dl dd:nth-of-type(2)}}",
 			"type": "multitext"
 		},
 		{
 			"name": "size",
-			"value": "",
+			"value": "{{selector:.org-page-details-module__card-spacing dl dd:nth-of-type(3)}}",
 			"type": "text"
 		},
 		{
 			"name": "loc",
-			"value": "",
+			"value": "{{selector:.org-page-details-module__card-spacing dl dd:nth-of-type(5)}}",
 			"type": "multitext"
 		},
 		{
@@ -66,8 +66,8 @@
 		}
 	],
 	"triggers": [
-		"https://www.linkedin.com/company/"
+		"https://www.linkedin.com/company/*/about/"
 	],
-	"noteNameFormat": "{{title|split:\":\"|first|split:\"(\"|first}}",
+	"noteNameFormat": "{{selector:h1.org-top-card-summary__title}}",
 	"path": "References"
 }

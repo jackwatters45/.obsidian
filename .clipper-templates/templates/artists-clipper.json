@@ -1,31 +1,26 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "Inspiration",
+	"name": "Artists",
 	"behavior": "create",
-	"noteContentFormat": "",
+	"noteContentFormat": "---\n\n## Wiki\n\n{{selectorHtml:#mw-content-text|remove_html:(\".navbox,.printfooter,.side-box\")|markdown}}",
 	"properties": [
 		{
 			"name": "categories",
-			"value": "[[Inspiration]]",
+			"value": "\"[[Artists]]\"",
 			"type": "multitext"
 		},
 		{
-			"name": "type",
-			"value": "",
-			"type": "multitext"
-		},
-		{
-			"name": "image",
-			"value": "{{image}}",
-			"type": "text"
-		},
-		{
-			"name": "url",
+			"name": "wikiUrl",
 			"value": "{{url}}",
 			"type": "text"
 		},
 		{
-			"name": "description",
+			"name": "genre",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "era",
 			"value": "",
 			"type": "text"
 		},
@@ -36,7 +31,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "",
+			"value": "artists",
 			"type": "multitext"
 		}
 	],

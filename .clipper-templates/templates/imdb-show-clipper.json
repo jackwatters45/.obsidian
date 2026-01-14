@@ -11,12 +11,17 @@
 		},
 		{
 			"name": "genre",
-			"value": "{{schema:genre|wikilink|join}}",
+			"value": "{{selector:.ipc-chip-list__scroller a|slice:-3|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
+			"name": "description",
+			"value": "{{schema:description}}",
+			"type": "text"
+		},
+		{
 			"name": "creator",
-			"value": "{{selector:[data-testid=\"title-pc-principal-credit\"]:first-child a|unique|wikilink|join}}",
+			"value": "{{selector:[data-testid=\\\"title-pc-principal-credit\\\"]:first-child a|unique|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
@@ -31,7 +36,7 @@
 		},
 		{
 			"name": "cast",
-			"value": "{{selector:[data-testid=\"title-pc-principal-credit\"]:has(a[aria-label*=\"cast\"]) .ipc-metadata-list-item__list-content-item--link|unique|wikilink|join}}",
+			"value": "{{selector:[data-testid=\\\"title-pc-principal-credit\\\"]:has(a[aria-label*=\\\"cast\\\"]) .ipc-metadata-list-item__list-content-item--link|unique|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
@@ -50,8 +55,13 @@
 			"type": "text"
 		},
 		{
-			"name": "year",
-			"value": "{{schema:datePublished|split:\"-\"|slice:0,1}}",
+			"name": "startYear",
+			"value": "{{selector:a[href*=\\\"releaseinfo\\\"]|split:\\\"–\\\"|first}}",
+			"type": "number"
+		},
+		{
+			"name": "endYear",
+			"value": "{{selector:a[href*=\\\\\"releaseinfo\\\\\"]|first|slice:-4}}",
 			"type": "number"
 		},
 		{

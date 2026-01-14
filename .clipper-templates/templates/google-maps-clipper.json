@@ -11,7 +11,7 @@
 		},
 		{
 			"name": "type",
-			"value": "",
+			"value": "{{selector:button[jsaction*=\\\\\"category\\\\\"]|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
@@ -20,23 +20,18 @@
 			"type": "text"
 		},
 		{
-			"name": "loc",
-			"value": "",
-			"type": "multitext"
-		},
-		{
 			"name": "coordinates",
 			"value": "{{url|split:\\\"/@\\\"|slice:1|split:\\\",\\\"|slice:0,2}}",
 			"type": "multitext"
 		},
 		{
 			"name": "address",
-			"value": "{{selector:button[aria-label^=\\\"Address:\\\"]:aria-label|split:\\\"Address: \\\"|slice:1}}",
+			"value": "{{selector:button[data-item-id=\\\\\"address\\\\\"] .Io6YTe}}",
 			"type": "text"
 		},
 		{
 			"name": "url",
-			"value": "{{selector:div[aria-label^=\\\"Information for\\\"] a[href*=\\\"http\\\"]:href|slice:0,1}}",
+			"value": "{{selector:a[data-item-id=\\\\\"authority\\\\\"]?href}}",
 			"type": "multitext"
 		},
 		{
@@ -51,7 +46,7 @@
 		},
 		{
 			"name": "description",
-			"value": "{{selector:div[aria-label^=\\\"About \\\"] button .PYvSYb[jslog]}}",
+			"value": "",
 			"type": "text"
 		},
 		{
@@ -73,6 +68,6 @@
 	"triggers": [
 		"https://www.google.com/maps/place/"
 	],
-	"noteNameFormat": "{{selector:div[role=\"main\"]:aria-label}}",
+	"noteNameFormat": "{{selector:h1}}",
 	"path": "References"
 }

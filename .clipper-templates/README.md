@@ -4,7 +4,7 @@ Templates for the [Obsidian Web Clipper](https://obsidian.md/clipper) browser ex
 
 ## Templates
 
-25 clipper templates in `.clipper-templates/templates/` for sites like YouTube, GitHub, Wikipedia, Goodreads, Letterboxd, IMDB, Spotify, NYT Cooking, Google Maps, and more.
+23 clipper templates in `.clipper-templates/templates/` for sites like YouTube, GitHub, Wikipedia, Goodreads, Letterboxd, IMDB, Spotify, NYT Cooking, Google Maps, and more.
 
 ## Testing
 

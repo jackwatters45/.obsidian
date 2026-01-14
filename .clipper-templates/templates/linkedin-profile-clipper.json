@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "LinkedIn Profile",
 	"behavior": "create",
-	"noteContentFormat": "",
+	"noteContentFormat": "{{selector:div.display-flex.ph5.pv3 span[aria-hidden]}}",
 	"properties": [
 		{
 			"name": "categories",
@@ -11,18 +11,18 @@
 		},
 		{
 			"name": "org",
-			"value": "",
+			"value": "{{selector:button[aria-label^=\"Current company\"]|wikilink}}",
 			"type": "multitext"
 		},
 		{
 			"name": "role",
-			"value": "{{selector:meta[property='og:description']:content}}",
+			"value": "{{selector:li.artdeco-list__item .t-bold span[aria-hidden=\"true\"]|first}}",
 			"type": "text"
 		},
 		{
 			"name": "loc",
-			"value": "",
-			"type": "multitext"
+			"value": "{{selector:span.text-body-small.inline}}",
+			"type": "text"
 		},
 		{
 			"name": "linkedin",
@@ -35,8 +35,13 @@
 			"type": "text"
 		},
 		{
+			"name": "school",
+			"value": "{{selector:button[aria-label^=\"Education\"]|wikilink}}",
+			"type": "multitext"
+		},
+		{
 			"name": "image",
-			"value": "{{selector:meta[property='og:image']:content}}",
+			"value": "{{selector:button[aria-label*=\"profile picture\"] img?src}}",
 			"type": "text"
 		},
 		{
@@ -53,6 +58,6 @@
 	"triggers": [
 		"https://www.linkedin.com/in/"
 	],
-	"noteNameFormat": "{{selector:meta[property='og:title']:content|split:\" |\"|first}}",
+	"noteNameFormat": "{{selector:h1}}",
 	"path": "References"
 }

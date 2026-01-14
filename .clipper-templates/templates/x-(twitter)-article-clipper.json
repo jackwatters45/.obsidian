@@ -38,6 +38,6 @@
 	"triggers": [
 		"/^https:\\/\\/x\\.com\\/[A-Za-z0-9_]+\\/article\\/\\d+$/"
 	],
-	"noteNameFormat": "{{title}}",
+	"noteNameFormat": "{{selector:[data-testid=\"twitter-article-title\"]}}",
 	"path": "Clippings"
 }

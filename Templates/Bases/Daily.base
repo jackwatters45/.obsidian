@@ -58,7 +58,7 @@ views:
     name: Weekly
     filters:
       and:
-        - 'file.inFolder("Daily")'
+        - file.inFolder("Daily")
     order:
       - file.name
       - categories
@@ -73,9 +73,9 @@ views:
         - '!file.inFolder("Daily")'
         - '!file.inFolder("Weekly")'
         - or:
-            - 'date(this.start) && date(this.end) && date(file.basename) >= date(this.start) && date(file.basename) <= date(this.end)'
-            - 'date(this.start) && date(this.end) && file.ctime >= date(this.start) && file.ctime <= date(this.end)'
-            - 'file.links.contains(this.file)'
+            - date(this.start) && date(this.end) && date(file.basename) >= date(this.start) && date(file.basename) <= date(this.end)
+            - date(this.start) && date(this.end) && file.ctime >= date(this.start) && file.ctime <= date(this.end)
+            - file.links.contains(this.file)
     order:
       - file.name
       - categories

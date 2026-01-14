@@ -11,7 +11,7 @@
 		},
 		{
 			"name": "org",
-			"value": "{{selector:button[aria-label*=\"company\"]|wikilink}}",
+			"value": "{{selector:button[aria-label^=\"Current company\"]|wikilink}}",
 			"type": "multitext"
 		},
 		{
@@ -36,7 +36,7 @@
 		},
 		{
 			"name": "school",
-			"value": "{{selector:button[aria-label*=\"school\"]|wikilink}}",
+			"value": "{{selector:button[aria-label^=\"Education\"]|wikilink}}",
 			"type": "multitext"
 		},
 		{

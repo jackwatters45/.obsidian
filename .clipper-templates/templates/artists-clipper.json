@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Artists",
 	"behavior": "create",
-	"noteContentFormat": "{{selectorHtml:#mw-content-text|remove_html:(\".navbox,.printfooter,.side-box\")|markdown}}",
+	"noteContentFormat": "---\n\n## Wiki\n\n{{selectorHtml:#mw-content-text|remove_html:(\".navbox,.printfooter,.side-box\")|markdown}}",
 	"properties": [
 		{
 			"name": "categories",

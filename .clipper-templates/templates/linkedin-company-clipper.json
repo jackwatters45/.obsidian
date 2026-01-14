@@ -36,7 +36,7 @@
 		},
 		{
 			"name": "description",
-			"value": "{{selector:meta[property='og:description']:content}}",
+			"value": "{{selector:p.break-words.white-space-pre-wrap}}",
 			"type": "text"
 		},
 		{
@@ -68,6 +68,6 @@
 	"triggers": [
 		"https://www.linkedin.com/company/*/about/"
 	],
-	"noteNameFormat": "{{title|split:\":\"|first|split:\"(\"|first}}",
+	"noteNameFormat": "{{meta:og:title|split:\"|\"|first|trim}}",
 	"path": "References"
 }

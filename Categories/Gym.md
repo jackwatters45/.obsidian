@@ -17,17 +17,17 @@ Workout programs, exercises, and fitness resources.
 
 ## Jailhouse Strong Routine
 
-3-day split, 30 min each. Day 4 rest, repeat.
+4-day split, 30 min each. Repeat.
 
 ### Day 1: Upper Body
-**Pull-up Pyramid** (15 min)
-- 1→2→3→...→10→...→3→2→1 = 100 reps
-- Any grip variation
-
 **Deck of Pain - Push-ups** (15 min)
 - Flip cards, do that many push-ups
 - Face cards = 10, Aces = 11
 - Full deck = 380 reps
+
+**Pull-up Pyramid** (15 min)
+- 1→2→3→...→10→...→3→2→1 = 100 reps
+- Any grip variation
 
 ### Day 2: Lower Body
 **Tyson Squat Workout** (2x)
@@ -48,6 +48,13 @@ Workout programs, exercises, and fitness resources.
 - Sets meet in the middle
 
 Benchmarks: <24 min = good, <20 min = excellent, <15 min = elite
+
+### Day 4: Stretching & Abs
+**Stretching**
+- TBD
+
+**Abs**
+- TBD
 
 ## TODO
 - [ ] Create individual workout base

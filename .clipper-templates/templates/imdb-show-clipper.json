@@ -61,7 +61,7 @@
 		},
 		{
 			"name": "endYear",
-			"value": "{{selector:a[href*=\"releaseinfo\"]|first|split:\"–\"|last}}",
+			"value": "{{selector:a[href*=\"releaseinfo\"]|first|split:\"–\"|slice:-1}}",
 			"type": "number"
 		},
 		{

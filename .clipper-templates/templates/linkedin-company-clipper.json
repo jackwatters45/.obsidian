@@ -16,7 +16,7 @@
 		},
 		{
 			"name": "url",
-			"value": "",
+			"value": "{{selector:.org-page-details-module__card-spacing dl dd a?href}}",
 			"type": "text"
 		},
 		{
@@ -41,17 +41,17 @@
 		},
 		{
 			"name": "industry",
-			"value": "",
+			"value": "{{selector:.org-page-details-module__card-spacing dl dd:nth-of-type(2)}}",
 			"type": "multitext"
 		},
 		{
 			"name": "size",
-			"value": "",
+			"value": "{{selector:.org-page-details-module__card-spacing dl dd:nth-of-type(3)}}",
 			"type": "text"
 		},
 		{
 			"name": "loc",
-			"value": "",
+			"value": "{{selector:.org-page-details-module__card-spacing dl dd:nth-of-type(5)}}",
 			"type": "multitext"
 		},
 		{
@@ -66,7 +66,7 @@
 		}
 	],
 	"triggers": [
-		"https://www.linkedin.com/company/"
+		"https://www.linkedin.com/company/*/about/"
 	],
 	"noteNameFormat": "{{title|split:\":\"|first|split:\"(\"|first}}",
 	"path": "References"

@@ -16,7 +16,7 @@
 		},
 		{
 			"name": "url",
-			"value": "{{selector:.org-page-details-module__card-spacing dl dd a?href}}",
+			"value": "{{selector:.org-page-details-module__card-spacing dd a[href^=\"http\"]?href}}",
 			"type": "text"
 		},
 		{
@@ -31,7 +31,7 @@
 		},
 		{
 			"name": "image",
-			"value": "{{selector:meta[property='og:image']:content}}",
+			"value": "{{selector:img.org-top-card-primary-content__logo?src}}",
 			"type": "text"
 		},
 		{
@@ -68,6 +68,6 @@
 	"triggers": [
 		"https://www.linkedin.com/company/*/about/"
 	],
-	"noteNameFormat": "{{meta:og:title|split:\"|\"|first|trim}}",
+	"noteNameFormat": "{{selector:h1.org-top-card-summary__title}}",
 	"path": "References"
 }

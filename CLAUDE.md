@@ -166,8 +166,8 @@ Templates live in `/Templates/` and use Templater syntax:
 Categories are index pages that embed a `.base` query file:
 - Actors, Albums, Apps, Articles, Artists, Authors, Books, Career, Companies
 - Directors, Emails, Events, Evergreen, Files, Food, Genre, GitHub, Gym
-- Inspiration, Job Interviews, Learning, Meetings, Movies, People, Places
-- Podcasts, Posts, Products, Projects, Recipes, Restaurants, Shows, Songs, Tech, Trips
+- Inspiration, Learning, Meetings, Movies, People, Places, Podcasts, Posts
+- Products, Projects, Recipes, Restaurants, Shows, Songs, Tech, Trips
 
 ## Base Queries (.base files)
 
@@ -185,7 +185,6 @@ The `Templates/Bases/` folder contains Dataview queries that render dynamic cont
 - `Apps.base` - Software applications
 - `Emails.base` - Important correspondence
 - `Food.base` - Dishes and meals
-- `Job Interviews.base` - Interview tracking
 - `Home.base` - Home page filtered by #home tag
 - `Meetings.base` - Meeting history for people
 - `Weekly.base` - Weekly summaries

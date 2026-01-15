@@ -55,7 +55,6 @@ scoreGr:             # Goodreads score
 rating:              # Personal rating
 language:            # Language(s)
 topics: []           # Related topics
-created:             # Date added (YYYY-MM-DD)
 finished:            # Date finished reading
 tags:
   - to-read          # or "reading", "books" when done
@@ -72,7 +71,6 @@ tags:
   - clippings
 author: []           # Article author(s)
 url: ""              # Source URL
-created:             # Date clipped
 published:           # Original publish date
 topics: []           # Related topics
 ---
@@ -103,7 +101,6 @@ linkedin:
 instagram:
 email:
 phone:
-created:
 met:                 # When first met
 last contact:        # Last interaction date
 ---
@@ -118,7 +115,6 @@ author: []           # Repo owner
 stars:               # Star count
 url:                 # Repo URL
 description:         # Repo description
-created:             # Date clipped
 tags:
   - coding
 ---
@@ -158,25 +154,37 @@ Templates live in `/Templates/` and use Templater syntax:
 - Daily Note Template - Standard daily note
 - Tomorrow Daily Note Template - Creates tomorrow's note (`Alt+Cmd+D`)
 - Weekly Note Template - Weekly summary
-- Content types: Book, Movie, Show, Podcast, Album, Gym
-- People: People, Author, Director, Actor, Musician
+- Content types: Book, Movie, Show, Podcast, Album, Gym, Food, App
+- People: People, Author, Director, Actor, Artist
 - Places: Place, City, Restaurant
 - Projects: Project, Company
-- Reference: Clipping, Evergreen, Quote, Post
+- Reference: Clipping, Evergreen, Post
+- Communication: Email, Job Interview, Meeting
 
 ## Categories
 
 Categories are index pages that embed a `.base` query file:
-- Albums, Articles, Books, Career, Companies, Events, Evergreen, Files
-- Genre, GitHub, Gym, Inspiration, Journal, Learning, Meetings, Movies
-- People, Places, Podcasts, Posts, Products, Projects, Recipes, Shows
-- Songs, Tech, Trips
+- Actors, Albums, Apps, Articles, Artists, Authors, Books, Career, Companies
+- Directors, Emails, Events, Evergreen, Files, Food, Genre, GitHub, Gym
+- Inspiration, Learning, Meetings, Movies, People, Places, Podcasts, Posts
+- Products, Projects, Recipes, Restaurants, Shows, Songs, Tech, Trips
 
 ## Base Queries (.base files)
 
 The `Templates/Bases/` folder contains Dataview queries that render dynamic content:
 - `Daily.base` - Shows entries related to current daily note
-- `Books.base` - Book library views
+- `Books.base` - Book library views with Author filter
+- `Movies.base` - Movie library with Actor/Director filters
+- `Shows.base` - TV shows with Actor filter
+- `Albums.base` - Music albums with Artist filter
+- `Authors.base` - Authors with their books
+- `Actors.base` - Actors with their movies/shows
+- `Directors.base` - Directors with their movies/shows
+- `Artists.base` - Music artists
+- `Restaurants.base` - Restaurant visits
+- `Apps.base` - Software applications
+- `Emails.base` - Important correspondence
+- `Food.base` - Dishes and meals
 - `Home.base` - Home page filtered by #home tag
 - `Meetings.base` - Meeting history for people
 - `Weekly.base` - Weekly summaries
@@ -221,6 +229,15 @@ Web clipper templates in `.clipper-templates/templates/`:
 
 ## Content Guidelines for AI Agents
 
+### CRITICAL: File Modification Rules
+
+**NEVER use the Write tool or any command that recreates files.** Obsidian tracks file creation time (ctime) for indexing and queries. If you use Write instead of Edit, or use shell commands like `cat > file` or heredocs, Obsidian will detect the file as newly created, breaking:
+- Daily note "Created" views that filter by ctime
+- Any base queries using `file.ctime`
+- File history and modification tracking
+
+**ALWAYS use the Edit tool** to modify existing files. This preserves the original file's metadata.
+
 ### DO:
 - Preserve existing frontmatter structure when editing notes
 - Use proper Obsidian link syntax `[[]]` for internal references
@@ -230,6 +247,8 @@ Web clipper templates in `.clipper-templates/templates/`:
 - Respect the YYYY-MM-DD date format consistently
 
 ### DON'T:
+- **USE THE WRITE TOOL ON EXISTING FILES** - This recreates the file and breaks Obsidian's ctime tracking
+- Use `cat >`, heredocs, or any shell command that overwrites files - same issue as Write tool
 - Modify `.obsidian/` configuration files
 - Change `.base` query files without explicit request
 - Remove or restructure existing frontmatter fields

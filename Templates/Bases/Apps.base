@@ -1,0 +1,37 @@
+filters:
+  and:
+    - categories.contains(link("Apps"))
+    - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
+properties:
+  file.name:
+    displayName: App
+  note.maker:
+    displayName: Maker
+  note.rating:
+    displayName: Rating
+  file.ctime:
+    displayName: Added
+views:
+  - type: table
+    name: Apps
+    order:
+      - file.name
+      - maker
+      - rating
+      - file.ctime
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Favorites
+    filters:
+      and:
+        - rating >= 4
+    order:
+      - file.name
+      - maker
+      - rating
+    sort:
+      - property: rating
+        direction: DESC

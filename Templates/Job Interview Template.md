@@ -12,9 +12,9 @@ tags: []
 ---
 ## Questions and topics
 
-- 
+-
 
 ## Notes
 
-- 
+-
 

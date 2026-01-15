@@ -1,0 +1,70 @@
+filters:
+  and:
+    - categories.contains(link("Food"))
+    - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
+properties:
+  file.name:
+    displayName: Food
+  note.recipe:
+    displayName: Recipe
+  note.restaurant:
+    displayName: Restaurant
+  note.maker:
+    displayName: Maker
+  note.rating:
+    displayName: Rating
+  note.price:
+    displayName: Price
+  note.last:
+    displayName: Last Had
+views:
+  - type: table
+    name: Food
+    order:
+      - file.name
+      - recipe
+      - restaurant
+      - maker
+      - rating
+      - price
+      - last
+    sort:
+      - property: last
+        direction: DESC
+  - type: table
+    name: Favorites
+    filters:
+      and:
+        - rating >= 4
+    order:
+      - file.name
+      - maker
+      - rating
+    sort:
+      - property: rating
+        direction: DESC
+  - type: table
+    name: Recipe
+    filters:
+      and:
+        - list(recipe).contains(this)
+    order:
+      - file.name
+      - rating
+      - last
+    sort:
+      - property: rating
+        direction: DESC
+  - type: table
+    name: Restaurant
+    filters:
+      and:
+        - list(restaurant).contains(this)
+    order:
+      - file.name
+      - rating
+      - last
+    sort:
+      - property: last
+        direction: DESC

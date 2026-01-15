@@ -1,0 +1,54 @@
+filters:
+  and:
+    - categories.contains(link("Emails"))
+    - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
+properties:
+  file.name:
+    displayName: Subject
+  note.org:
+    displayName: Organization
+  note.people:
+    displayName: People
+  note.topics:
+    displayName: Topics
+  file.ctime:
+    displayName: Date
+views:
+  - type: table
+    name: Emails
+    order:
+      - file.name
+      - org
+      - people
+      - topics
+      - file.ctime
+    sort:
+      - property: file.ctime
+        direction: DESC
+  - type: table
+    name: Person
+    filters:
+      and:
+        - list(people).contains(this)
+    order:
+      - file.name
+      - org
+      - topics
+      - file.ctime
+    sort:
+      - property: file.ctime
+        direction: DESC
+  - type: table
+    name: Company
+    filters:
+      and:
+        - list(org).contains(this)
+    order:
+      - file.name
+      - people
+      - topics
+      - file.ctime
+    sort:
+      - property: file.ctime
+        direction: DESC

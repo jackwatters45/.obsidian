@@ -1,73 +1,68 @@
 {
-	"schemaVersion": "0.1.0",
-	"name": "LinkedIn Company",
-	"behavior": "create",
-	"noteContentFormat": "",
-	"properties": [
-		{
-			"name": "categories",
-			"value": "[[Companies]]",
-			"type": "multitext"
-		},
-		{
-			"name": "linkedin",
-			"value": "{{url}}",
-			"type": "text"
-		},
-		{
-			"name": "url",
-			"value": "{{selector:.org-page-details-module__card-spacing dd a[href^=\"http\"]?href}}",
-			"type": "text"
-		},
-		{
-			"name": "careers",
-			"value": "",
-			"type": "text"
-		},
-		{
-			"name": "people",
-			"value": "",
-			"type": "multitext"
-		},
-		{
-			"name": "image",
-			"value": "{{selector:img.org-top-card-primary-content__logo?src}}",
-			"type": "text"
-		},
-		{
-			"name": "description",
-			"value": "{{selector:p.break-words.white-space-pre-wrap}}",
-			"type": "text"
-		},
-		{
-			"name": "industry",
-			"value": "{{selector:.org-page-details-module__card-spacing dl dd:nth-of-type(2)}}",
-			"type": "multitext"
-		},
-		{
-			"name": "size",
-			"value": "{{selector:.org-page-details-module__card-spacing dl dd:nth-of-type(3)}}",
-			"type": "text"
-		},
-		{
-			"name": "loc",
-			"value": "{{selector:.org-page-details-module__card-spacing dl dd:nth-of-type(5)}}",
-			"type": "multitext"
-		},
-		{
-			"name": "created",
-			"value": "{{date}}",
-			"type": "date"
-		},
-		{
-			"name": "tags",
-			"value": "linkedin",
-			"type": "multitext"
-		}
-	],
-	"triggers": [
-		"https://www.linkedin.com/company/*/about/"
-	],
-	"noteNameFormat": "{{selector:h1.org-top-card-summary__title}}",
-	"path": "References"
+  "schemaVersion": "0.1.0",
+  "name": "LinkedIn Company",
+  "behavior": "create",
+  "noteContentFormat": "",
+  "properties": [
+    {
+      "name": "categories",
+      "value": "[[Companies]]",
+      "type": "multitext"
+    },
+    {
+      "name": "linkedin",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "url",
+      "value": "{{selector:.org-page-details-module__card-spacing dd a[href^=\"http\"]?href}}",
+      "type": "text"
+    },
+    {
+      "name": "careers",
+      "value": "",
+      "type": "text"
+    },
+    {
+      "name": "people",
+      "value": "",
+      "type": "multitext"
+    },
+    {
+      "name": "image",
+      "value": "{{selector:img.org-top-card-primary-content__logo?src}}",
+      "type": "text"
+    },
+    {
+      "name": "description",
+      "value": "{{selector:p.break-words.white-space-pre-wrap}}",
+      "type": "text"
+    },
+    {
+      "name": "industry",
+      "value": "{{selector:.org-page-details-module__card-spacing dl dd:nth-of-type(2)}}",
+      "type": "multitext"
+    },
+    {
+      "name": "size",
+      "value": "{{selector:.org-page-details-module__card-spacing dl dd:nth-of-type(3)}}",
+      "type": "text"
+    },
+    {
+      "name": "loc",
+      "value": "{{selector:.org-page-details-module__card-spacing dl dd:nth-of-type(5)}}",
+      "type": "multitext"
+    },
+    {
+      "name": "tags",
+      "value": "linkedin",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [
+    "https://www.linkedin.com/company/*/about/"
+  ],
+  "noteNameFormat": "{{selector:h1.org-top-card-summary__title}}",
+  "path": "References"
 }

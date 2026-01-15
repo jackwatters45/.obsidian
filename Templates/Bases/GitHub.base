@@ -10,7 +10,7 @@ properties:
     displayName: Author
   note.stars:
     displayName: Stars
-  note.created:
+  file.ctime:
     displayName: Clipped
   note.description:
     displayName: Description
@@ -21,8 +21,8 @@ views:
       - file.name
       - author
       - stars
-      - created
+      - file.ctime
       - description
     sort:
-      - property: created
+      - property: file.ctime
         direction: DESC

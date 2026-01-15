@@ -1,6 +1,5 @@
 ---
-categories: "[[People]]"
-type:
+categories:
   - "[[Authors]]"
 bio:
 tags: []

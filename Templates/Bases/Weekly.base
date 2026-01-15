@@ -1,9 +1,13 @@
+filters:
+  and:
+    - '!file.inFolder("Templates")'
+    - '!file.inFolder("Categories")'
 properties:
   file.name:
     displayName: Entry
   note.categories:
     displayName: Categories
-  note.created:
+  file.ctime:
     displayName: Created
   note.tags:
     displayName: Tags
@@ -31,13 +35,13 @@ views:
         - '!file.inFolder("Weekly")'
         - or:
             - date(this.start) && date(this.end) && date(file.basename) >= date(this.start) && date(file.basename) <= date(this.end)
-            - date(this.start) && date(this.end) && created >= date(this.start) && created <= date(this.end)
+            - date(this.start) && date(this.end) && file.ctime >= date(this.start) && file.ctime <= date(this.end)
             - file.links.contains(this.file)
     order:
       - file.name
       - categories
-      - created
+      - file.ctime
       - tags
     sort:
-      - property: created
+      - property: file.ctime
         direction: DESC

@@ -1,5 +1,6 @@
 ---
-categories: "[[Apps]]"
+categories:
+  - "[[Apps]]"
 maker: ""
 rating:
 tags: []

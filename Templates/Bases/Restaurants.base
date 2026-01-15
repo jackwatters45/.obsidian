@@ -1,0 +1,37 @@
+filters:
+  and:
+    - categories.contains(link("Restaurants"))
+    - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
+properties:
+  file.name:
+    displayName: Restaurant
+  note.loc:
+    displayName: Location
+  note.rating:
+    displayName: Rating
+  note.last:
+    displayName: Last Visit
+views:
+  - type: table
+    name: Restaurants
+    order:
+      - file.name
+      - loc
+      - rating
+      - last
+    sort:
+      - property: last
+        direction: DESC
+  - type: table
+    name: Favorites
+    filters:
+      and:
+        - rating >= 4
+    order:
+      - file.name
+      - loc
+      - rating
+    sort:
+      - property: rating
+        direction: DESC

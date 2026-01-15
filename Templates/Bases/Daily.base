@@ -1,20 +1,51 @@
 filters:
-  or:
-    - file.name.contains(this.file.name)
-    - created.toString().contains(this.file.name)
-    - start.toString().contains(this.file.name)
-    - end.toString().contains(this.file.name)
-    - file.links.contains(this.file)
+  and:
+    - '!file.inFolder("Templates")'
+    - '!file.inFolder("Categories")'
+    - or:
+        - file.name.contains(this.file.name)
+        - file.ctime.toString().contains(this.file.name)
+        - start.toString().contains(this.file.name)
+        - end.toString().contains(this.file.name)
+        - file.links.contains(this.file)
+        - file.mtime.toString().contains(this.file.name)
 properties:
   file.name:
     displayName: Entry
   note.categories:
     displayName: Categories
-  note.created:
+  file.ctime:
     displayName: Created
   note.tags:
     displayName: Tags
 views:
+  - type: table
+    name: Created
+    filters:
+      and:
+        - '!file.inFolder("Daily")'
+        - file.ctime.toString().contains(this.file.name)
+    order:
+      - file.name
+      - categories
+      - tags
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Modified
+    filters:
+      and:
+        - '!file.inFolder("Daily")'
+        - file.mtime.toString().contains(this.file.name)
+        - '!file.ctime.toString().contains(this.file.name)'
+    order:
+      - file.name
+      - categories
+      - tags
+    sort:
+      - property: file.name
+        direction: ASC
   - type: table
     name: Daily notes
     filters:
@@ -22,21 +53,21 @@ views:
         - '!file.inFolder("Daily")'
     order:
       - file.name
-      - created
+      - file.ctime
       - categories
       - tags
     sort:
+      - property: file.ctime
+        direction: DESC
       - property: tags
         direction: ASC
-      - property: created
-        direction: DESC
       - property: file.name
         direction: ASC
       - property: categories
         direction: ASC
     columnSize:
       file.name: 287
-      note.created: 128
+      file.ctime: 218
       note.categories: 119
   - type: table
     name: Yearly
@@ -46,19 +77,19 @@ views:
     order:
       - file.name
       - categories
-      - created
+      - file.ctime
     sort:
-      - property: created
+      - property: file.ctime
         direction: ASC
   - type: table
     name: Weekly
     filters:
       and:
-        - 'file.inFolder("Daily")'
+        - file.inFolder("Daily")
     order:
       - file.name
       - categories
-      - created
+      - file.ctime
     sort:
       - property: file.name
         direction: ASC
@@ -69,14 +100,14 @@ views:
         - '!file.inFolder("Daily")'
         - '!file.inFolder("Weekly")'
         - or:
-            - 'date(this.start) && date(this.end) && date(file.basename) >= date(this.start) && date(file.basename) <= date(this.end)'
-            - 'date(this.start) && date(this.end) && created >= date(this.start) && created <= date(this.end)'
-            - 'file.links.contains(this.file)'
+            - date(this.start) && date(this.end) && date(file.basename) >= date(this.start) && date(file.basename) <= date(this.end)
+            - date(this.start) && date(this.end) && file.ctime >= date(this.start) && file.ctime <= date(this.end)
+            - file.links.contains(this.file)
     order:
       - file.name
       - categories
-      - created
+      - file.ctime
       - tags
     sort:
-      - property: created
+      - property: file.ctime
         direction: DESC

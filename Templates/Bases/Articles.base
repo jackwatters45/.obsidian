@@ -1,7 +1,8 @@
 filters:
   and:
-    - note.tags.contains("articles")
+    - tags.contains("articles")
     - '!file.name.contains("Template")'
+    - file.name != "Articles"
 properties:
   file.name:
     displayName: Title
@@ -9,7 +10,7 @@ properties:
     displayName: Author
   note.published:
     displayName: Published
-  note.created:
+  file.ctime:
     displayName: Clipped
 views:
   - type: table
@@ -18,10 +19,13 @@ views:
       - file.name
       - author
       - published
-      - created
+      - tags
+      - file.ctime
     sort:
-      - property: created
+      - property: file.ctime
         direction: DESC
+    columnSize:
+      note.author: 187
   - type: table
     name: To Read
     filters:
@@ -32,7 +36,7 @@ views:
       - author
       - published
     sort:
-      - property: created
+      - property: file.ctime
         direction: DESC
   - type: table
     name: Author
@@ -43,4 +47,4 @@ views:
       - file.name
       - author
       - published
-      - created
+      - file.ctime

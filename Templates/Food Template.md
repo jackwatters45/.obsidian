@@ -1,10 +1,11 @@
 ---
 categories:
   - "[[Food]]"
+recipe:
+restaurant:
 maker:
 rating:
 price:
 last: {{date}}
-created: {{date}}
 tags: []
 ---

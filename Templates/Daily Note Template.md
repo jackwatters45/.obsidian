@@ -15,4 +15,6 @@ tags:
 
 
 ## Notes
-![[Daily.base]]
+![[Daily.base#Created]]
+
+![[Daily.base#Modified]]

@@ -10,7 +10,7 @@ properties:
     displayName: Year
   note.artist:
     displayName: Artist
-  note.created:
+  file.ctime:
     displayName: Added
   note.rating:
     displayName: Rating

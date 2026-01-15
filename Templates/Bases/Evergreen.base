@@ -5,14 +5,14 @@ filters:
 properties:
   file.name:
     displayName: Name
-  note.created:
+  file.ctime:
     displayName: Created
 views:
   - type: table
     name: Evergreen
     order:
       - file.name
-      - created
+      - file.ctime
     sort:
-      - property: created
+      - property: file.ctime
         direction: DESC

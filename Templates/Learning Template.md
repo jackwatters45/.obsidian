@@ -7,7 +7,6 @@ type:
 status:
 rating:
 topics: []
-created: {{date}}
 tags: []
 ---
 

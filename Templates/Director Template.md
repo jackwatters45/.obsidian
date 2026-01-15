@@ -1,11 +1,12 @@
 ---
 categories:
-  - "[[People]]"
-type:
   - "[[Directors]]"
-created: {{date}}
 tags: []
 ---
 ## Movies
 
 ![[Movies.base#Director]]
+
+## Shows
+
+![[Shows.base#Director]]

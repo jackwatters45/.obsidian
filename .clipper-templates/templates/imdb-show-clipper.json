@@ -1,88 +1,83 @@
 {
-	"schemaVersion": "0.1.0",
-	"name": "IMDB Show",
-	"behavior": "create",
-	"noteContentFormat": "",
-	"properties": [
-		{
-			"name": "categories",
-			"value": "[[Shows]]",
-			"type": "multitext"
-		},
-		{
-			"name": "genre",
-			"value": "{{selector:.ipc-chip-list__scroller a|slice:-3|wikilink|join}}",
-			"type": "multitext"
-		},
-		{
-			"name": "description",
-			"value": "{{schema:description}}",
-			"type": "text"
-		},
-		{
-			"name": "creator",
-			"value": "{{selector:[data-testid=\\\"title-pc-principal-credit\\\"]:first-child a|unique|wikilink|join}}",
-			"type": "multitext"
-		},
-		{
-			"name": "rating",
-			"value": "",
-			"type": "number"
-		},
-		{
-			"name": "scoreImdb",
-			"value": "{{schema:aggregateRating.ratingValue}}",
-			"type": "number"
-		},
-		{
-			"name": "cast",
-			"value": "{{selector:[data-testid=\\\"title-pc-principal-credit\\\"]:has(a[aria-label*=\\\"cast\\\"]) .ipc-metadata-list-item__list-content-item--link|unique|wikilink|join}}",
-			"type": "multitext"
-		},
-		{
-			"name": "cover",
-			"value": "{{schema:image}}",
-			"type": "text"
-		},
-		{
-			"name": "imdbUrl",
-			"value": "{{url}}",
-			"type": "text"
-		},
-		{
-			"name": "plot",
-			"value": "{{schema:description}}",
-			"type": "text"
-		},
-		{
-			"name": "startYear",
-			"value": "{{selector:a[href*=\\\"releaseinfo\\\"]|split:\\\"–\\\"|first}}",
-			"type": "number"
-		},
-		{
-			"name": "endYear",
-			"value": "{{selector:a[href*=\\\\\"releaseinfo\\\\\"]|first|slice:-4}}",
-			"type": "number"
-		},
-		{
-			"name": "created",
-			"value": "{{date}}",
-			"type": "date"
-		},
-		{
-			"name": "last",
-			"value": "",
-			"type": "date"
-		},
-		{
-			"name": "tags",
-			"value": "to-watch, media",
-			"type": "multitext"
-		}
-	],
-	"triggers": [
-		"schema:@TVSeries"
-	],
-	"noteNameFormat": "{{schema:name}}",
-	"path": "References"
+  "schemaVersion": "0.1.0",
+  "name": "IMDB Show",
+  "behavior": "create",
+  "noteContentFormat": "",
+  "properties": [
+    {
+      "name": "categories",
+      "value": "[[Shows]]",
+      "type": "multitext"
+    },
+    {
+      "name": "genre",
+      "value": "{{selector:.ipc-chip-list__scroller a|slice:-3|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "description",
+      "value": "{{schema:description}}",
+      "type": "text"
+    },
+    {
+      "name": "creator",
+      "value": "{{selector:[data-testid=\\\"title-pc-principal-credit\\\"]:first-child a|unique|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "rating",
+      "value": "",
+      "type": "number"
+    },
+    {
+      "name": "scoreImdb",
+      "value": "{{schema:aggregateRating.ratingValue}}",
+      "type": "number"
+    },
+    {
+      "name": "cast",
+      "value": "{{selector:[data-testid=\\\"title-pc-principal-credit\\\"]:has(a[aria-label*=\\\"cast\\\"]) .ipc-metadata-list-item__list-content-item--link|unique|wikilink|join}}",
+      "type": "multitext"
+    },
+    {
+      "name": "cover",
+      "value": "{{schema:image}}",
+      "type": "text"
+    },
+    {
+      "name": "imdbUrl",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "plot",
+      "value": "{{schema:description}}",
+      "type": "text"
+    },
+    {
+      "name": "startYear",
+      "value": "{{selector:a[href*=\\\"releaseinfo\\\"]|split:\\\"–\\\"|first}}",
+      "type": "number"
+    },
+    {
+      "name": "endYear",
+      "value": "{{selector:a[href*=\\\\\"releaseinfo\\\\\"]|first|slice:-4}}",
+      "type": "number"
+    },
+    {
+      "name": "last",
+      "value": "",
+      "type": "date"
+    },
+    {
+      "name": "tags",
+      "value": "to-watch, media",
+      "type": "multitext"
+    }
+  ],
+  "triggers": [
+    "schema:@TVSeries"
+  ],
+  "noteNameFormat": "{{schema:name}}",
+  "path": "References"
 }

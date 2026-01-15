@@ -14,7 +14,7 @@ properties:
     displayName: Language
   note.type:
     displayName: Topics
-  note.created:
+  file.ctime:
     displayName: Added
 views:
   - type: table
@@ -25,9 +25,9 @@ views:
       - githubUrl
       - language
       - type
-      - created
+      - file.ctime
     sort:
-      - property: created
+      - property: file.ctime
         direction: DESC
   - type: table
     name: Language
@@ -39,7 +39,7 @@ views:
       - url
       - githubUrl
       - language
-      - created
+      - file.ctime
     sort:
       - property: file.name
         direction: ASC
@@ -53,7 +53,7 @@ views:
       - url
       - githubUrl
       - language
-      - created
+      - file.ctime
     sort:
       - property: file.name
         direction: ASC

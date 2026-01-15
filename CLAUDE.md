@@ -159,7 +159,7 @@ Templates live in `/Templates/` and use Templater syntax:
 - Places: Place, City, Restaurant
 - Projects: Project, Company
 - Reference: Clipping, Evergreen, Post
-- Communication: Email, Job Interview
+- Communication: Email, Job Interview, Meeting
 
 ## Categories
 

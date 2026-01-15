@@ -229,6 +229,15 @@ Web clipper templates in `.clipper-templates/templates/`:
 
 ## Content Guidelines for AI Agents
 
+### CRITICAL: File Modification Rules
+
+**NEVER use the Write tool or any command that recreates files.** Obsidian tracks file creation time (ctime) for indexing and queries. If you use Write instead of Edit, or use shell commands like `cat > file` or heredocs, Obsidian will detect the file as newly created, breaking:
+- Daily note "Created" views that filter by ctime
+- Any base queries using `file.ctime`
+- File history and modification tracking
+
+**ALWAYS use the Edit tool** to modify existing files. This preserves the original file's metadata.
+
 ### DO:
 - Preserve existing frontmatter structure when editing notes
 - Use proper Obsidian link syntax `[[]]` for internal references
@@ -238,6 +247,8 @@ Web clipper templates in `.clipper-templates/templates/`:
 - Respect the YYYY-MM-DD date format consistently
 
 ### DON'T:
+- **USE THE WRITE TOOL ON EXISTING FILES** - This recreates the file and breaks Obsidian's ctime tracking
+- Use `cat >`, heredocs, or any shell command that overwrites files - same issue as Write tool
 - Modify `.obsidian/` configuration files
 - Change `.base` query files without explicit request
 - Remove or restructure existing frontmatter fields

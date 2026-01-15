@@ -20,6 +20,33 @@ properties:
     displayName: Tags
 views:
   - type: table
+    name: Created
+    filters:
+      and:
+        - '!file.inFolder("Daily")'
+        - file.ctime.toString().contains(this.file.name)
+    order:
+      - file.name
+      - categories
+      - tags
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Modified
+    filters:
+      and:
+        - '!file.inFolder("Daily")'
+        - file.mtime.toString().contains(this.file.name)
+        - '!file.ctime.toString().contains(this.file.name)'
+    order:
+      - file.name
+      - categories
+      - tags
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
     name: Daily notes
     filters:
       and:

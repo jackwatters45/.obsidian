@@ -6,6 +6,10 @@ filters:
 properties:
   file.name:
     displayName: Food
+  note.recipe:
+    displayName: Recipe
+  note.restaurant:
+    displayName: Restaurant
   note.maker:
     displayName: Maker
   note.rating:
@@ -19,6 +23,8 @@ views:
     name: Food
     order:
       - file.name
+      - recipe
+      - restaurant
       - maker
       - rating
       - price
@@ -37,4 +43,28 @@ views:
       - rating
     sort:
       - property: rating
+        direction: DESC
+  - type: table
+    name: Recipe
+    filters:
+      and:
+        - list(recipe).contains(this)
+    order:
+      - file.name
+      - rating
+      - last
+    sort:
+      - property: rating
+        direction: DESC
+  - type: table
+    name: Restaurant
+    filters:
+      and:
+        - list(restaurant).contains(this)
+    order:
+      - file.name
+      - rating
+      - last
+    sort:
+      - property: last
         direction: DESC

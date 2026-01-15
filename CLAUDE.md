@@ -142,7 +142,7 @@ tags:
 - `#home` - Appears on home page
 
 ### Special Tags
-- `#0🌲` - Evergreen notes (mature, refined ideas)
+- `#evergreen` - Evergreen notes (mature, refined ideas)
 
 ## Template System
 
@@ -154,25 +154,38 @@ Templates live in `/Templates/` and use Templater syntax:
 - Daily Note Template - Standard daily note
 - Tomorrow Daily Note Template - Creates tomorrow's note (`Alt+Cmd+D`)
 - Weekly Note Template - Weekly summary
-- Content types: Book, Movie, Show, Podcast, Album, Gym
-- People: People, Author, Director, Actor, Musician
+- Content types: Book, Movie, Show, Podcast, Album, Gym, Food, App
+- People: People, Author, Director, Actor, Artist
 - Places: Place, City, Restaurant
 - Projects: Project, Company
-- Reference: Clipping, Evergreen, Quote, Post
+- Reference: Clipping, Evergreen, Post
+- Communication: Email, Job Interview
 
 ## Categories
 
 Categories are index pages that embed a `.base` query file:
-- Albums, Articles, Books, Career, Companies, Events, Evergreen, Files
-- Genre, GitHub, Gym, Inspiration, Journal, Learning, Meetings, Movies
-- People, Places, Podcasts, Posts, Products, Projects, Recipes, Shows
-- Songs, Tech, Trips
+- Actors, Albums, Apps, Articles, Artists, Authors, Books, Career, Companies
+- Directors, Emails, Events, Evergreen, Files, Food, Genre, GitHub, Gym
+- Inspiration, Job Interviews, Learning, Meetings, Movies, People, Places
+- Podcasts, Posts, Products, Projects, Recipes, Restaurants, Shows, Songs, Tech, Trips
 
 ## Base Queries (.base files)
 
 The `Templates/Bases/` folder contains Dataview queries that render dynamic content:
 - `Daily.base` - Shows entries related to current daily note
-- `Books.base` - Book library views
+- `Books.base` - Book library views with Author filter
+- `Movies.base` - Movie library with Actor/Director filters
+- `Shows.base` - TV shows with Actor filter
+- `Albums.base` - Music albums with Artist filter
+- `Authors.base` - Authors with their books
+- `Actors.base` - Actors with their movies/shows
+- `Directors.base` - Directors with their movies/shows
+- `Artists.base` - Music artists
+- `Restaurants.base` - Restaurant visits
+- `Apps.base` - Software applications
+- `Emails.base` - Important correspondence
+- `Food.base` - Dishes and meals
+- `Job Interviews.base` - Interview tracking
 - `Home.base` - Home page filtered by #home tag
 - `Meetings.base` - Meeting history for people
 - `Weekly.base` - Weekly summaries

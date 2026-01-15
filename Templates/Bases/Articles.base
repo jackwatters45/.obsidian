@@ -1,7 +1,8 @@
 filters:
   and:
-    - note.tags.contains("articles")
+    - tags.contains("articles")
     - '!file.name.contains("Template")'
+    - file.name != "Articles"
 properties:
   file.name:
     displayName: Title
@@ -18,10 +19,13 @@ views:
       - file.name
       - author
       - published
+      - tags
       - file.ctime
     sort:
       - property: file.ctime
         direction: DESC
+    columnSize:
+      note.author: 187
   - type: table
     name: To Read
     filters:

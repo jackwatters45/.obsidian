@@ -1,5 +1,5 @@
 ---
 template: "Evergreen Template"
 tags:
-  - 0🌲
+  - evergreen
 ---

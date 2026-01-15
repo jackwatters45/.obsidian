@@ -28,6 +28,11 @@
       "name": "image",
       "value": "{{image}}",
       "type": "text"
+    },
+    {
+      "name": "tags",
+      "value": "",
+      "type": "multitext"
     }
   ],
   "triggers": [

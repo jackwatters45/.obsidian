@@ -1,6 +1,7 @@
 ---
 template: "App Template"
-categories: "[[Apps]]"
+categories:
+  - "[[Apps]]"
 maker: ""
 rating:
 tags: []

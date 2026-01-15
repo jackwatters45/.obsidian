@@ -1,7 +1,6 @@
 ---
 template: "Author Template"
-categories: "[[People]]"
-type:
+categories:
   - "[[Authors]]"
 bio:
 tags: []

@@ -1,8 +1,6 @@
 ---
 template: "Job Interview Template"
 categories:
-  - "[[Meetings]]"
-type:
   - "[[Job Interviews]]"
 org:
 people: []
@@ -13,9 +11,9 @@ tags: []
 ---
 ## Questions and topics
 
-- 
+-
 
 ## Notes
 
-- 
+-
 

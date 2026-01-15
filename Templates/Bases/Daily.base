@@ -31,7 +31,7 @@ views:
       - tags
     sort:
       - property: file.ctime
-        direction: ASC
+        direction: DESC
       - property: tags
         direction: ASC
       - property: file.name

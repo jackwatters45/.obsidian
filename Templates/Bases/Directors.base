@@ -1,0 +1,44 @@
+filters:
+  and:
+    - categories.contains(link("Directors"))
+    - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
+properties:
+  file.name:
+    displayName: Director
+  file.ctime:
+    displayName: Added
+views:
+  - type: table
+    name: Directors
+    order:
+      - file.name
+      - file.ctime
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Movies
+    filters:
+      and:
+        - list(director).contains(this)
+    order:
+      - file.name
+      - year
+      - cast
+      - genre
+    sort:
+      - property: year
+        direction: DESC
+  - type: table
+    name: Shows
+    filters:
+      and:
+        - list(director).contains(this)
+    order:
+      - file.name
+      - year
+      - genre
+    sort:
+      - property: year
+        direction: DESC

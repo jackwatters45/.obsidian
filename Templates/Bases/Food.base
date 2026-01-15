@@ -1,0 +1,40 @@
+filters:
+  and:
+    - categories.contains(link("Food"))
+    - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
+properties:
+  file.name:
+    displayName: Food
+  note.maker:
+    displayName: Maker
+  note.rating:
+    displayName: Rating
+  note.price:
+    displayName: Price
+  note.last:
+    displayName: Last Had
+views:
+  - type: table
+    name: Food
+    order:
+      - file.name
+      - maker
+      - rating
+      - price
+      - last
+    sort:
+      - property: last
+        direction: DESC
+  - type: table
+    name: Favorites
+    filters:
+      and:
+        - rating >= 4
+    order:
+      - file.name
+      - maker
+      - rating
+    sort:
+      - property: rating
+        direction: DESC

@@ -1,0 +1,41 @@
+filters:
+  and:
+    - categories.contains(link("Job Interviews"))
+    - '!file.name.contains("Template")'
+    - '!file.inFolder("Categories")'
+properties:
+  file.name:
+    displayName: Interview
+  note.org:
+    displayName: Company
+  note.role:
+    displayName: Role
+  note.date:
+    displayName: Date
+  note.rating:
+    displayName: Rating
+views:
+  - type: table
+    name: Interviews
+    order:
+      - file.name
+      - org
+      - role
+      - date
+      - rating
+    sort:
+      - property: date
+        direction: DESC
+  - type: table
+    name: Company
+    filters:
+      and:
+        - list(org).contains(this)
+    order:
+      - file.name
+      - role
+      - date
+      - rating
+    sort:
+      - property: date
+        direction: DESC

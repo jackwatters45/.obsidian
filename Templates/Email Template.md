@@ -1,5 +1,4 @@
 ---
-template: "Email Template"
 categories:
   - "[[Emails]]"
 org: []

@@ -1,5 +1,4 @@
 ---
-template: "Director Template"
 categories:
   - "[[Directors]]"
 tags: []

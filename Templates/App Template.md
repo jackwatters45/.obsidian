@@ -1,5 +1,4 @@
 ---
-template: "App Template"
 categories:
   - "[[Apps]]"
 maker: ""

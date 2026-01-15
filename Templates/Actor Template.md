@@ -1,5 +1,4 @@
 ---
-template: "Actor Template"
 categories:
   - "[[Actors]]"
 tags: []

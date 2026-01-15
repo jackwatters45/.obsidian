@@ -1,5 +1,4 @@
 ---
-template: "City Template"
 categories:
   - "[[Places]]"
 type:

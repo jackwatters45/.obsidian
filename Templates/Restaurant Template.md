@@ -1,5 +1,4 @@
 ---
-template: "Restaurant Template"
 categories:
   - "[[Restaurants]]"
 loc:

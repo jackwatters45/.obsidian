@@ -1,5 +1,4 @@
 ---
-template: "Artist Template"
 categories:
   - "[[Artists]]"
 genre: []

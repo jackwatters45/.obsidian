@@ -1,5 +1,4 @@
 ---
-template: "People Template"
 categories:
   - "[[People]]"
 birthday:

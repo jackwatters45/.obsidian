@@ -1,5 +1,4 @@
 ---
-template: "Product Template"
 categories:
   - "[[Products]]"
 type:

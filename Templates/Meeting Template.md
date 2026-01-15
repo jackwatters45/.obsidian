@@ -1,5 +1,4 @@
 ---
-template: "Meeting Template"
 categories:
   - "[[Meetings]]"
 date: {{date}}

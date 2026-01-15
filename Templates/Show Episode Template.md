@@ -1,5 +1,4 @@
 ---
-template: "Show Episode Template"
 categories:
   - "[[Show episodes]]"
 show:

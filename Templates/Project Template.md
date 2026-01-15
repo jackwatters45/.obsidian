@@ -1,5 +1,4 @@
 ---
-template: "Project Template"
 categories:
   - "[[Projects]]"
 type: []

@@ -1,5 +1,4 @@
 ---
-template: "Author Template"
 categories:
   - "[[Authors]]"
 bio:

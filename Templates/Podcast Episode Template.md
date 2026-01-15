@@ -1,5 +1,4 @@
 ---
-template: "Podcast Episode Template"
 categories:
   - "[[Podcast episodes]]"
 tags:

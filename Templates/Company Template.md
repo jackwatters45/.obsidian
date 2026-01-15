@@ -1,5 +1,4 @@
 ---
-template: "Company Template"
 categories:
   - "[[Companies]]"
 linkedin:

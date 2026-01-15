@@ -1,5 +1,4 @@
 ---
-template: "Post Template"
 categories:
   - "[[Posts]]"
 author:

@@ -1,5 +1,4 @@
 ---
-template: "Job Interview Template"
 categories:
   - "[[Meetings]]"
 type:

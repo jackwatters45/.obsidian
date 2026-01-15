@@ -1,5 +1,4 @@
 ---
-template: "Learning Template"
 categories:
   - "[[Learning]]"
 url:

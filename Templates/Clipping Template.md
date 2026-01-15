@@ -1,5 +1,4 @@
 ---
-template: "Clipping Template"
 categories: []
 tags:
   - clippings

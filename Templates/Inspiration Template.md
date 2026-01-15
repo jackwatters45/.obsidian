@@ -1,5 +1,4 @@
 ---
-template: "Inspiration Template"
 categories:
   - "[[Inspiration]]"
 type: []

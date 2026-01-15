@@ -5,10 +5,10 @@ filters:
     - or:
         - file.name.contains(this.file.name)
         - file.ctime.toString().contains(this.file.name)
-        - file.mtime.toString().contains(this.file.name)
         - start.toString().contains(this.file.name)
         - end.toString().contains(this.file.name)
         - file.links.contains(this.file)
+        - file.mtime.toString().contains(this.file.name)
 properties:
   file.name:
     displayName: Entry
@@ -30,17 +30,17 @@ views:
       - categories
       - tags
     sort:
+      - property: file.ctime
+        direction: ASC
       - property: tags
         direction: ASC
-      - property: file.ctime
-        direction: DESC
       - property: file.name
         direction: ASC
       - property: categories
         direction: ASC
     columnSize:
       file.name: 287
-      file.ctime: 128
+      file.ctime: 218
       note.categories: 119
   - type: table
     name: Yearly

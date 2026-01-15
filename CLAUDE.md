@@ -142,7 +142,7 @@ tags:
 - `#home` - Appears on home page
 
 ### Special Tags
-- `#evergreen` - Evergreen notes (mature, refined ideas)
+- `#0🌲` - Evergreen notes (mature, refined ideas)
 
 ## Template System
 

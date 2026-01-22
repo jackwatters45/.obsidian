@@ -1,11 +1,11 @@
 ---
+categories:
+  - "[[Gym]]"
 tags:
   - home
   - self-improvement
   - gym
   - goals
-categories:
-  - "[[Gym]]"
 ---
 
 # Gym
@@ -59,6 +59,19 @@ Benchmarks: <24 min = good, <20 min = excellent, <15 min = elite
 ## TODO
 - [ ] Create individual workout base
 
+
+## Programs
+- [[Bill-Starr-5x5-.xlsx]]
+
 ## Resources
 - [[Jailhouse Strong.pdf]]
 - [[ISSA 30 Day Bodyweight Program.pdf]]
+- [[Super Squats.pdf]]
+- [[squat-bible.epub]]
+- [[Base Strength.pdf]]
+- [[Base Strength_2.pdf]]
+
+---
+
+Base strength phase
+![[base-strength-phase.png]]

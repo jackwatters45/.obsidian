@@ -29,6 +29,8 @@ tags:
 
 ## Notes
 ![[Daily.base]]
+
+![[Daily.base#Modified]]
 `;
 
 const folder = app.vault.getAbstractFileByPath("Daily");

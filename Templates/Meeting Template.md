@@ -1,20 +1,17 @@
 ---
 categories:
   - "[[Meetings]]"
-date: {{date}}
+date: {{ date }}
 people: []
 org:
 type:
 tags: []
 ---
 ## Agenda
-
--
+- 
 
 ## Notes
-
--
+- 
 
 ## Action Items
-
 - [ ]

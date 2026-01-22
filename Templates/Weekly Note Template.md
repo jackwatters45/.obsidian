@@ -33,6 +33,10 @@ next: "[[${nextWeek}]]"
 ## Goals
 
 
+## Week Review
+- [ ] Clean up root notes
+
+
 ## Week Prep
 - [ ] Clothes Prep
 - [ ] Meal Prep
@@ -40,9 +44,7 @@ next: "[[${nextWeek}]]"
 
 ## Notes
 
-
 ## Daily Notes
-
 ![[Weekly.base#Daily Notes]]
 
 ## All Entries

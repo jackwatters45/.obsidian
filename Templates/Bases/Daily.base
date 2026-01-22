@@ -38,7 +38,7 @@ views:
       and:
         - '!file.inFolder("Daily")'
         - file.mtime.toString().contains(this.file.name)
-        - '!file.ctime.toString().contains(this.file.name)'
+        - "!file.ctime.toString().contains(this.file.name)"
     order:
       - file.name
       - categories

@@ -7,7 +7,7 @@ tags:
 
 Notes related to coding, software development, and programming.
 
-![[Coding.base]]
+![[Coding.base#To Read]]
 
 ---
 
@@ -43,3 +43,6 @@ Notes related to coding, software development, and programming.
 - [[Go]]
 - [[React Native]]
 - [[WebRTC]]
+
+## All Resources
+![[Coding.base]]

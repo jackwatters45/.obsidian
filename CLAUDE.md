@@ -21,19 +21,20 @@ AI agents should treat this as a structured note-taking system with specific con
 
 ## File Naming Conventions
 
-| Type | Format | Example |
-|------|--------|---------|
-| Daily notes | `YYYY-MM-DD.md` | `2026-01-07.md` |
-| Weekly notes | `YYYY-Www.md` | `2026-W02.md` |
-| Books | Title as filename | `The Art of Doing Science and Engineering Learning to Learn.md` |
-| Clippings | Article title | `Compound Engineering How Every Codes With Agents.md` |
-| People | Full name | `Richard Hamming.md` |
+| Type         | Format            | Example                                                         |
+| ------------ | ----------------- | --------------------------------------------------------------- |
+| Daily notes  | `YYYY-MM-DD.md`   | `2026-01-07.md`                                                 |
+| Weekly notes | `YYYY-Www.md`     | `2026-W02.md`                                                   |
+| Books        | Title as filename | `The Art of Doing Science and Engineering Learning to Learn.md` |
+| Clippings    | Article title     | `Compound Engineering How Every Codes With Agents.md`           |
+| People       | Full name         | `Richard Hamming.md`                                            |
 
 ## Frontmatter Schema
 
 All notes use YAML frontmatter. Common patterns:
 
 ### Daily Notes
+
 ```yaml
 ---
 tags:
@@ -42,79 +43,84 @@ tags:
 ```
 
 ### Books
+
 ```yaml
 ---
 categories:
   - "[[Books]]"
-author: []           # Links to author notes
-genre: []            # Links to genre notes
-cover:               # URL to cover image
-pages:               # Number of pages
-year:                # Publication year
-scoreGr:             # Goodreads score
-rating:              # Personal rating
-language:            # Language(s)
-topics: []           # Related topics
-finished:            # Date finished reading
+author: [] # Links to author notes
+genre: [] # Links to genre notes
+cover: # URL to cover image
+pages: # Number of pages
+year: # Publication year
+scoreGr: # Goodreads score
+rating: # Personal rating
+language: # Language(s)
+topics: [] # Related topics
+finished: # Date finished reading
 tags:
-  - to-read          # or "reading", "books" when done
-series: []           # Book series
+  - to-read # or "reading", "books" when done
+series: [] # Book series
 ---
 ```
 
 ### Clippings (Web Articles)
+
 ```yaml
 ---
 categories:
   - "[[Clippings]]"
 tags:
   - clippings
-author: []           # Article author(s)
-url: ""              # Source URL
-published:           # Original publish date
-topics: []           # Related topics
+author: [] # Article author(s)
+url: "" # Source URL
+published: # Original publish date
+topics: [] # Related topics
 ---
 ```
 
 ### Projects
+
 ```yaml
 ---
 categories:
   - "[[Projects]]"
-type: []             # Project type
-org: []              # Associated organization
-start:               # Start date
-year:                # Year
-url:                 # Project URL
-status:              # Current status
+type: [] # Project type
+org: [] # Associated organization
+start: # Start date
+year: # Year
+url: # Project URL
+status: # Current status
 ---
 ```
 
 ### People
+
 ```yaml
 ---
 categories:
   - "[[People]]"
 birthday:
-org: []              # Organizations
+org: [] # Organizations
 linkedin:
 instagram:
 email:
 phone:
-met:                 # When first met
-last contact:        # Last interaction date
+met: # When first met
+last contact: # Last interaction date
 ---
 ```
 
 ### GitHub Repos
+
 ```yaml
 ---
 categories:
   - "[[GitHub]]"
-author: []           # Repo owner
-stars:               # Star count
-url:                 # Repo URL
-description:         # Repo description
+author: [] # Repo owner
+stars: # Star count
+url: # Repo URL
+description: # Repo description
 tags:
   - coding
 ---
@@ -130,27 +136,32 @@ tags:
 ## Tag System
 
 ### Status Tags
+
 - `#to-read` - Queued for reading
 - `#reading` - Currently reading
 - `#read` - Finished reading
 - `#daily`, `#weekly`, `#monthly` - Temporal notes
 
 ### Category Tags
+
 - `#categories` - Category index pages
 - `#clippings` - Web clippings
 - `#books` - Book entries
 - `#home` - Appears on home page
 
 ### Special Tags
+
 - `#0🌲` - Evergreen notes (mature, refined ideas)
 
 ## Template System
 
 Templates live in `/Templates/` and use Templater syntax:
+
 - `{{date}}` - Current date
 - `{{time}}` - Current time
 
 ### Available Templates
+
 - Daily Note Template - Standard daily note
 - Tomorrow Daily Note Template - Creates tomorrow's note (`Alt+Cmd+D`)
 - Weekly Note Template - Weekly summary
@@ -164,6 +175,7 @@ Templates live in `/Templates/` and use Templater syntax:
 ## Categories
 
 Categories are index pages that embed a `.base` query file:
+
 - Actors, Albums, Apps, Articles, Artists, Authors, Books, Career, Companies
 - Directors, Emails, Events, Evergreen, Files, Food, Genre, GitHub, Gym
 - Inspiration, Learning, Meetings, Movies, People, Places, Podcasts, Posts
@@ -172,6 +184,7 @@ Categories are index pages that embed a `.base` query file:
 ## Base Queries (.base files)
 
 The `Templates/Bases/` folder contains Dataview queries that render dynamic content:
+
 - `Daily.base` - Shows entries related to current daily note
 - `Books.base` - Book library views with Author filter
 - `Movies.base` - Movie library with Actor/Director filters
@@ -201,20 +214,26 @@ These are embedded in notes using `![[filename.base]]`.
 tags:
   - daily
 ---
+
 ## Journal
+
 [Free-form journaling]
 
 ## TODO
+
 - [ ] Tasks for today
 - [x] Completed tasks
 
 ### Planned
+
 - [ ] Future tasks with context
 
 ## Tomorrow
+
 [Tasks to move to next day]
 
 ## Notes
+
 [Miscellaneous notes]
 
 ![[Daily.base]]
@@ -223,6 +242,7 @@ tags:
 ## Clipper Templates
 
 Web clipper templates in `.clipper-templates/templates/`:
+
 - See `.clipper-templates/SELECTOR-SYNTAX.md` for selector reference
 - Test selectors in browser console before updating templates
 - Templates for: GitHub, Goodreads, YouTube, Spotify, IMDB, LinkedIn, etc.
@@ -232,6 +252,7 @@ Web clipper templates in `.clipper-templates/templates/`:
 ### CRITICAL: File Modification Rules
 
 **NEVER use the Write tool or any command that recreates files.** Obsidian tracks file creation time (ctime) for indexing and queries. If you use Write instead of Edit, or use shell commands like `cat > file` or heredocs, Obsidian will detect the file as newly created, breaking:
+
 - Daily note "Created" views that filter by ctime
 - Any base queries using `file.ctime`
 - File history and modification tracking
@@ -239,6 +260,7 @@ Web clipper templates in `.clipper-templates/templates/`:
 **ALWAYS use the Edit tool** to modify existing files. This preserves the original file's metadata.
 
 ### DO:
+
 - Preserve existing frontmatter structure when editing notes
 - Use proper Obsidian link syntax `[[]]` for internal references
 - Match existing tag conventions (lowercase, hyphenated)
@@ -247,6 +269,7 @@ Web clipper templates in `.clipper-templates/templates/`:
 - Respect the YYYY-MM-DD date format consistently
 
 ### DON'T:
+
 - **USE THE WRITE TOOL ON EXISTING FILES** - This recreates the file and breaks Obsidian's ctime tracking
 - Use `cat >`, heredocs, or any shell command that overwrites files - same issue as Write tool
 - Modify `.obsidian/` configuration files
@@ -257,6 +280,7 @@ Web clipper templates in `.clipper-templates/templates/`:
 - Change established naming conventions
 
 ### When Creating New Notes:
+
 1. Determine the correct category/folder
 2. Use the appropriate template if one exists
 3. Fill frontmatter with available information
@@ -266,6 +290,7 @@ Web clipper templates in `.clipper-templates/templates/`:
 ## Git Configuration
 
 The vault uses git with a whitelist approach:
+
 ```gitignore
 *                           # Ignore everything by default
 !Templates/                 # Except templates
@@ -285,15 +310,17 @@ The vault uses git with a whitelist approach:
 ## Current Projects & Focus Areas
 
 Based on `Home.md`, active areas include:
+
 - Job search (Australia)
 - [[LaxDB]] project
-- [[Applied Epic Migration]]
+- [[Trollycare]]
 - [[Running]]
 - [[Books]] tracking
 
 ## Plugin Ecosystem
 
 The vault uses Obsidian plugins. Key ones based on config:
+
 - Daily Notes (configured for `/Daily/` folder)
 - Templater (for template processing)
 - Dataview (for `.base` queries)
@@ -303,17 +330,44 @@ The vault uses Obsidian plugins. Key ones based on config:
 ## Working with This Vault
 
 ### Reading Notes
+
 - Check frontmatter for metadata
 - Look for embedded bases (`![[*.base]]`) for dynamic content
 - Follow `[[links]]` to understand relationships
 
 ### Modifying Notes
+
 - Preserve existing structure
 - Add to appropriate sections
 - Update frontmatter dates when relevant
 
 ### Creating Notes
+
 - Always check if similar note exists first
 - Use correct folder location
 - Apply appropriate template
 - Set proper categories and tags
+
+## QMD Vault Search
+
+Use `qmd` CLI for semantic search across the vault:
+
+```bash
+qmd search "keyword"       # Fast BM25 keyword search
+qmd vsearch "concept"      # Semantic vector search
+qmd query "question"       # Hybrid + reranking (best quality)
+qmd get "Daily/2026-01-15.md"  # Get full document
+qmd get "#abc123"          # Get by docid from search results
+qmd multi-get "Daily/2026-01*.md"  # Get multiple by glob
+```
+
+Options:
+
+- `-n 10` - Number of results
+- `-c vault` - Filter to vault collection
+- `--min-score 0.3` - Score threshold
+- `--json` / `--md` - Output format for processing
+- `--full` - Include full document content
+
+Use `qmd query` when searching for concepts or answering questions about vault content.
+Use `qmd search` for quick keyword lookups.

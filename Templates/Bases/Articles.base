@@ -35,6 +35,7 @@ views:
       - file.name
       - author
       - published
+      - tags
     sort:
       - property: file.ctime
         direction: DESC

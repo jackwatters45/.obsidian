@@ -24,6 +24,18 @@ views:
       - property: file.ctime
         direction: DESC
   - type: table
+    name: To Read
+    filters:
+      and:
+        - note.tags.contains("to-read")
+    order:
+      - file.name
+      - tags
+      - file.ctime
+    sort:
+      - property: file.ctime
+        direction: DESC
+  - type: table
     name: Language
     filters:
       and:

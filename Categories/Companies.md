@@ -10,19 +10,13 @@ Companies, organizations, and businesses.
 
 ![[Companies.base]]
 
-### Main
-
-- [[Aigen]] - Incredible tech
-- [[VertiGIS]] - GIS opportunities in BC and has environmental use cases
-- [[Quarter20]] - Cool ass product
-- [[Pano.ai]] - something similar but maybe not specifically pano
 
 ### Environment
 
 - [[Aigen]]
-- [[VertiGIS]] - Keep Applying
+- [[VertiGIS]] 
 - [[Pano.ai]]
-- [[Barnacle Systems]] - Keep Applying
+- [[Barnacle Systems]]
 - Pattern
 
 ### Dev Agencies

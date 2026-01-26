@@ -1,9 +1,8 @@
 # Ignore all files by default
 *
 
-# Obsidian settings
-!.obsidian/
-!.obsidian/**
+# Obsidian settings (managed via dotfiles symlinks)
+.obsidian/
 
 # Templates
 !Templates/

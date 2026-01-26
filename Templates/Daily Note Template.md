@@ -8,9 +8,6 @@ tags:
 ## TODO
 
 
-### Planned
-
-
 ## Tomorrow
 
 

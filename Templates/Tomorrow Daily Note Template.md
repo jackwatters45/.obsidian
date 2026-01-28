@@ -21,9 +21,6 @@ tags:
 ## TODO
 
 
-### Planned
-
-
 ## Tomorrow
 
 

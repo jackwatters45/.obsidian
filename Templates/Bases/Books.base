@@ -21,16 +21,92 @@ views:
       - year
       - rating
       - topics
-      - tags
       - language
+      - tags
       - genre
       - finished
       - file.ctime
     sort:
       - property: file.name
-        direction: ASC
+        direction: DESC
     columnSize:
       note.tags: 403
+  - type: table
+    name: Next
+    filters:
+      and:
+        - note.tags.contains("next")
+    order:
+      - file.name
+      - author
+      - year
+      - tags
+      - genre
+      - topics
+    sort:
+      - property: file.ctime
+        direction: DESC
+  - type: table
+    name: To Read
+    filters:
+      and:
+        - note.tags.contains("to-read")
+    order:
+      - file.name
+      - author
+      - year
+      - tags
+      - genre
+      - topics
+    sort:
+      - property: file.ctime
+        direction: DESC
+    columnSize:
+      note.author: 160
+  - type: table
+    name: Reading
+    filters:
+      and:
+        - note.tags.contains("reading")
+    order:
+      - file.name
+      - author
+      - year
+      - genre
+      - topics
+    sort:
+      - property: file.ctime
+        direction: DESC
+  - type: table
+    name: Partially Read
+    filters:
+      and:
+        - note.tags.contains("partially-read")
+    order:
+      - file.name
+      - author
+      - year
+      - genre
+      - topics
+    sort:
+      - property: file.ctime
+        direction: DESC
+  - type: table
+    name: Read
+    filters:
+      and:
+        - note.tags.contains("read")
+    order:
+      - file.name
+      - author
+      - year
+      - genre
+      - topics
+      - rating
+      - finished
+    sort:
+      - property: finished
+        direction: DESC
   - type: table
     name: Top rated
     order:

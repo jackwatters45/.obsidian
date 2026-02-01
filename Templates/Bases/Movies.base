@@ -32,8 +32,9 @@ views:
     order:
       - file.name
       - year
-      - director
       - rating
+      - tags
+      - director
       - last
       - plot
       - genre
@@ -47,6 +48,22 @@ views:
       note.director: 205
       note.plot: 233
       note.genre: 261
+  - type: table
+    name: Next
+    filters:
+      and:
+        - note.tags.contains("next")
+    order:
+      - file.name
+      - year
+      - scoreImdb
+      - scoreRT
+      - runtime
+      - director
+      - genre
+    sort:
+      - property: file.ctime
+        direction: DESC
   - type: table
     name: To-watch
     filters:

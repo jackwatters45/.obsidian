@@ -27,6 +27,8 @@ views:
       - status
       - file.mtime
     sort:
+      - property: status
+        direction: ASC
       - property: file.mtime
         direction: DESC
     columnSize:

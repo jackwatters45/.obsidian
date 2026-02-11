@@ -16,236 +16,8 @@ AI agents should treat this as a structured note-taking system with specific con
 │   └── Bases/          # Dataview base queries (.base files)
 ├── Weekly/             # Weekly notes (YYYY-Www.md format)
 ├── .clipper-templates/ # Obsidian Web Clipper templates
-└── z_move/             # Staging area for reorganization
+
 ```
-
-## File Naming Conventions
-
-| Type         | Format            | Example                                                         |
-| ------------ | ----------------- | --------------------------------------------------------------- |
-| Daily notes  | `YYYY-MM-DD.md`   | `2026-01-07.md`                                                 |
-| Weekly notes | `YYYY-Www.md`     | `2026-W02.md`                                                   |
-| Books        | Title as filename | `The Art of Doing Science and Engineering Learning to Learn.md` |
-| Clippings    | Article title     | `Compound Engineering How Every Codes With Agents.md`           |
-| People       | Full name         | `Richard Hamming.md`                                            |
-
-## Frontmatter Schema
-
-All notes use YAML frontmatter. Common patterns:
-
-### Daily Notes
-
-```yaml
----
-tags:
-  - daily
----
-```
-
-### Books
-
-```yaml
----
-categories:
-  - "[[Books]]"
-author: [] # Links to author notes
-genre: [] # Links to genre notes
-cover: # URL to cover image
-pages: # Number of pages
-year: # Publication year
-scoreGr: # Goodreads score
-rating: # Personal rating
-language: # Language(s)
-topics: [] # Related topics
-finished: # Date finished reading
-tags:
-  - to-read # or "reading", "books" when done
-series: [] # Book series
----
-```
-
-### Clippings (Web Articles)
-
-```yaml
----
-categories:
-  - "[[Clippings]]"
-tags:
-  - clippings
-author: [] # Article author(s)
-url: "" # Source URL
-published: # Original publish date
-topics: [] # Related topics
----
-```
-
-### Projects
-
-```yaml
----
-categories:
-  - "[[Projects]]"
-type: [] # Project type
-org: [] # Associated organization
-start: # Start date
-year: # Year
-url: # Project URL
-status: # Current status
----
-```
-
-### People
-
-```yaml
----
-categories:
-  - "[[People]]"
-birthday:
-org: [] # Organizations
-linkedin:
-instagram:
-email:
-phone:
-met: # When first met
-last contact: # Last interaction date
----
-```
-
-### GitHub Repos
-
-```yaml
----
-categories:
-  - "[[GitHub]]"
-author: [] # Repo owner
-stars: # Star count
-url: # Repo URL
-description: # Repo description
-tags:
-  - coding
----
-```
-
-## Linking Conventions
-
-- **Internal links**: Use `[[Note Name]]` or `[[Note Name|Display Text]]`
-- **Category references**: Always link to category pages like `"[[Books]]"`, `"[[People]]"`
-- **Embed content**: Use `![[filename]]` for embeds (e.g., `![[Daily.base]]`)
-- **Tags**: Use `#tag-name` format, prefer lowercase with hyphens
-
-## Tag System
-
-### Status Tags
-
-- `#to-read` - Queued for reading
-- `#reading` - Currently reading
-- `#read` - Finished reading
-- `#daily`, `#weekly`, `#monthly` - Temporal notes
-
-### Category Tags
-
-- `#categories` - Category index pages
-- `#clippings` - Web clippings
-- `#books` - Book entries
-- `#home` - Appears on home page
-
-### Special Tags
-
-- `#0🌲` - Evergreen notes (mature, refined ideas)
-
-## Template System
-
-Templates live in `/Templates/` and use Templater syntax:
-
-- `{{date}}` - Current date
-- `{{time}}` - Current time
-
-### Available Templates
-
-- Daily Note Template - Standard daily note
-- Tomorrow Daily Note Template - Creates tomorrow's note (`Alt+Cmd+D`)
-- Weekly Note Template - Weekly summary
-- Content types: Book, Movie, Show, Podcast, Album, Gym, Food, App
-- People: People, Author, Director, Actor, Artist
-- Places: Place, City, Restaurant
-- Projects: Project, Company
-- Reference: Clipping, Evergreen, Post
-- Communication: Email, Job Interview, Meeting
-
-## Categories
-
-Categories are index pages that embed a `.base` query file:
-
-- Actors, Albums, Apps, Articles, Artists, Authors, Books, Career, Companies
-- Directors, Emails, Events, Evergreen, Files, Food, Genre, GitHub, Gym
-- Inspiration, Learning, Meetings, Movies, People, Places, Podcasts, Posts
-- Products, Projects, Recipes, Restaurants, Shows, Songs, Tech, Trips
-
-## Base Queries (.base files)
-
-The `Templates/Bases/` folder contains Dataview queries that render dynamic content:
-
-- `Daily.base` - Shows entries related to current daily note
-- `Books.base` - Book library views with Author filter
-- `Movies.base` - Movie library with Actor/Director filters
-- `Shows.base` - TV shows with Actor filter
-- `Albums.base` - Music albums with Artist filter
-- `Authors.base` - Authors with their books
-- `Actors.base` - Actors with their movies/shows
-- `Directors.base` - Directors with their movies/shows
-- `Artists.base` - Music artists
-- `Restaurants.base` - Restaurant visits
-- `Apps.base` - Software applications
-- `Emails.base` - Important correspondence
-- `Food.base` - Dishes and meals
-- `Home.base` - Home page filtered by #home tag
-- `Meetings.base` - Meeting history for people
-- `Weekly.base` - Weekly summaries
-- `Gym.base` - Workout resources
-- `GitHub.base` - GitHub repos
-- `Articles.base` - Articles with To Read view
-
-These are embedded in notes using `![[filename.base]]`.
-
-## Daily Note Structure
-
-```markdown
----
-tags:
-  - daily
----
-
-## Journal
-
-[Free-form journaling]
-
-## TODO
-
-- [ ] Tasks for today
-- [x] Completed tasks
-
-### Planned
-
-- [ ] Future tasks with context
-
-## Tomorrow
-
-[Tasks to move to next day]
-
-## Notes
-
-[Miscellaneous notes]
-
-![[Daily.base]]
-```
-
-## Clipper Templates
-
-Web clipper templates in `.clipper-templates/templates/`:
-
-- See `.clipper-templates/SELECTOR-SYNTAX.md` for selector reference
-- Test selectors in browser console before updating templates
-- Templates for: GitHub, Goodreads, YouTube, Spotify, IMDB, LinkedIn, etc.
 
 ## Content Guidelines for AI Agents
 
@@ -287,44 +59,12 @@ Web clipper templates in `.clipper-templates/templates/`:
 4. Add proper category links (e.g., `categories: ["[[Books]]"]`)
 5. Use consistent date formatting
 
-## Git Configuration
-
-The vault uses git with a whitelist approach:
-
-```gitignore
-*                           # Ignore everything by default
-!Templates/                 # Except templates
-!Templates/**
-!Categories/                # Except categories
-!Categories/**
-!.obsidian/                 # Except Obsidian config
-!.obsidian/**
-.obsidian/workspace.json    # But ignore workspace state
-.obsidian/graph.json        # And graph state
-!.clipper-templates/        # Except clipper templates
-!.clipper-templates/**
-.DS_Store
-!.gitignore
-```
-
-## Current Projects & Focus Areas
-
-Based on `Home.md`, active areas include:
-
-- Job search (Australia)
-- [[LaxDB]] project
-- [[Trollycare]]
-- [[Running]]
-- [[Books]] tracking
-
 ## Plugin Ecosystem
 
 The vault uses Obsidian plugins. Key ones based on config:
 
 - Daily Notes (configured for `/Daily/` folder)
 - Templater (for template processing)
-- Dataview (for `.base` queries)
-- ZK Prefixer (for Zettelkasten-style IDs)
 - Obsidian Web Clipper (browser extension)
 
 ## Working with This Vault
@@ -371,3 +111,61 @@ Options:
 
 Use `qmd query` when searching for concepts or answering questions about vault content.
 Use `qmd search` for quick keyword lookups.
+
+## Obsidian CLI
+
+Official CLI (requires Obsidian 1.12+, app must be running). Prefer this over direct file manipulation when Obsidian is running — it respects plugins, templates, and vault indexing.
+
+```bash
+# Daily notes
+obsidian daily                                    # Open today's daily note
+obsidian daily:append content="- [ ] Buy milk"    # Append to daily note
+obsidian daily:read                               # Read daily note contents
+
+# Files
+obsidian read file=Recipe                         # Read file (wikilink-style resolution)
+obsidian read path="Templates/Recipe.md"          # Read file by exact path
+obsidian create name="Trip to Paris" template=Travel  # Create from template
+obsidian open file=Recipe                         # Open file in Obsidian
+obsidian append file=Note content="New line"      # Append to file
+obsidian prepend file=Note content="Top line"     # Prepend after frontmatter
+obsidian move file=Note to="Archive/"             # Move/rename file
+obsidian delete file=Note                         # Trash file
+
+# Search & navigation
+obsidian search query="meeting notes"             # Search vault
+obsidian search query="TODO" total                # Count matches
+obsidian tags all counts                          # All tags with counts
+obsidian tasks daily todo                         # Incomplete tasks from daily note
+obsidian task daily line=3 toggle                 # Toggle task completion
+obsidian backlinks file=Recipe                    # List backlinks
+obsidian outline file=Recipe                      # Show headings
+
+# Properties
+obsidian properties file=Recipe                   # List file properties
+obsidian property:set name=status value=done      # Set property
+obsidian property:read name=rating file=Recipe    # Read property value
+
+# Plugins & themes
+obsidian plugins                                  # List installed plugins
+obsidian plugin:enable id=dataview                # Enable plugin
+obsidian plugin:install id=my-plugin enable       # Install + enable
+
+# Developer / automation
+obsidian eval code="app.vault.getFiles().length"  # Run JS in Obsidian
+obsidian dev:screenshot path=screenshot.png       # Screenshot the app
+obsidian dev:console                              # Show console messages
+obsidian dev:errors                               # Show JS errors
+
+# Vault targeting
+obsidian vault=Notes daily                        # Target specific vault
+obsidian vault                                    # Show vault info
+```
+
+Key patterns:
+- `file=<name>` resolves like wikilinks (name only, no path/ext needed)
+- `path=<path>` requires exact path from vault root
+- Most commands default to the active file if no file/path given
+- Add `silent` flag to suppress opening files, `--copy` to copy output to clipboard
+- Add `total` flag to get counts instead of lists
+- Multiline content: use `\n` for newlines, `\t` for tabs

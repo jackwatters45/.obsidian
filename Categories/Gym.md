@@ -7,6 +7,8 @@ tags:
   - gym
   - goals
 ---
+Switching to [[Greyskull LP]] - Update CSV with "Plugins" + add bw stuff
+
 
 # Gym
 

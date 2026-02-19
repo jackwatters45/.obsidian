@@ -1,0 +1,36 @@
+filters:
+  and:
+    - tags.contains("self-improvement")
+    - '!file.name.contains("Template")'
+    - file.name != "Self Improvement"
+    - file.name != "Self Improvement 2026"
+properties:
+  file.name:
+    displayName: Name
+  note.tags:
+    displayName: Tags
+  file.ctime:
+    displayName: Added
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - tags
+      - file.ctime
+    sort:
+      - property: file.ctime
+        direction: DESC
+  - type: table
+    name: Notes
+    order:
+      - file.name
+      - tags
+      - file.ctime
+    filters:
+      and:
+        - '!file.folder.contains("Clippings")'
+        - '!file.folder.contains("References")'
+    sort:
+      - property: file.ctime
+        direction: DESC

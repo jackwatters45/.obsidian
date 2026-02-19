@@ -1,0 +1,53 @@
+"Categories/Self Improvement.md"
+  971c956d3a998c40 1-9
+"Templates/Bases/Self Improvement.base"
+  3fbd054cdd1b068e 24-36
+  971c956d3a998c40 6
+  81e2663ca71abe65 1-5,7-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.4",
+  "base_commit_sha": "0b6662a855fed3e971ad9cc04bf867131ab5ca5d",
+  "prompts": {
+    "3fbd054cdd1b068e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e334a268-261d-4d85-9764-98a6165961bb",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "jackwatters45 <jack.watters@me.com>",
+      "messages": [],
+      "total_additions": 13,
+      "total_deletions": 0,
+      "accepted_lines": 13,
+      "overriden_lines": 0
+    },
+    "81e2663ca71abe65": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "f6ad4177-c34a-4e75-874c-15c30a20af31",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "jackwatters45 <jack.watters@me.com>",
+      "messages": [],
+      "total_additions": 22,
+      "total_deletions": 0,
+      "accepted_lines": 22,
+      "overriden_lines": 0
+    },
+    "971c956d3a998c40": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "232c18d9-508d-4d6c-8ce8-f7282e558876",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "jackwatters45 <jack.watters@me.com>",
+      "messages": [],
+      "total_additions": 10,
+      "total_deletions": 0,
+      "accepted_lines": 10,
+      "overriden_lines": 0
+    }
+  }
+}

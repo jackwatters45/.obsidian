@@ -34,6 +34,9 @@ next: "[[${nextWeek}]]"
 
 
 ## Week Review
+- [ ] Non-negotiables: did I protect the cascade? (Sleep → blood sugar → focus → output)
+- [ ] [[Standing Orders#The Cut]]: read Standing Orders. What survived, what didn't?
+- [ ] Commitments: anything to add, prune, or graduate?
 - [ ] Clean up root notes
 
 

@@ -1,0 +1,23 @@
+filters:
+  and:
+    - '!file.inFolder("Templates")'
+    - '!file.inFolder("Categories")'
+properties:
+  file.name:
+    displayName: Entry
+  note.tags:
+    displayName: Tags
+  file.ctime:
+    displayName: Created
+views:
+  - type: table
+    name: Weekly Notes
+    filters:
+      and:
+        - file.inFolder("Weekly")
+        - date(this.start) && date(this.end) && date(note.start) >= date(this.start) && date(note.start) <= date(this.end)
+    order:
+      - file.name
+    sort:
+      - property: file.name
+        direction: ASC

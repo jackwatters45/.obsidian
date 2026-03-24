@@ -21,15 +21,11 @@ tags:
 
 
 ## Focus
-- **Deep work?**
-- **Phone discipline?**
-- **What broke?**
+*Deep work? Phone discipline? What broke?*
+
 
 ## Sleep
-- **Bed:**
-- **Wake:**
-- **Quality:**
-- **Notes:**
+*In Bed? Asleep? Wake? Quality? Notes?*
 
 ## Notes
 ![[Daily.base#Created]]

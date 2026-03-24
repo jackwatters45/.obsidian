@@ -20,6 +20,9 @@ tags:
 
 ## TODO
 
+### Log
+
+
 ### Deep Work
 
 

@@ -17,16 +17,18 @@ views:
     name: Books
     order:
       - file.name
+      - tags
       - author
-      - year
+      - finished
       - rating
+      - year
       - topics
       - language
-      - tags
       - genre
-      - finished
       - file.ctime
     sort:
+      - property: tags
+        direction: ASC
       - property: file.name
         direction: DESC
     columnSize:
@@ -38,9 +40,10 @@ views:
         - note.tags.contains("next")
     order:
       - file.name
-      - author
-      - year
       - tags
+      - author
+      - finished
+      - year
       - genre
       - topics
     sort:
@@ -53,12 +56,15 @@ views:
         - note.tags.contains("to-read")
     order:
       - file.name
-      - author
-      - year
       - tags
+      - author
+      - finished
+      - year
       - genre
       - topics
     sort:
+      - property: file.name
+        direction: ASC
       - property: file.ctime
         direction: DESC
     columnSize:
@@ -70,7 +76,9 @@ views:
         - note.tags.contains("reading")
     order:
       - file.name
+      - tags
       - author
+      - finished
       - year
       - genre
       - topics
@@ -84,7 +92,9 @@ views:
         - note.tags.contains("partially-read")
     order:
       - file.name
+      - tags
       - author
+      - finished
       - year
       - genre
       - topics
@@ -98,12 +108,13 @@ views:
         - note.tags.contains("read")
     order:
       - file.name
+      - tags
+      - finished
+      - rating
       - author
       - year
       - genre
       - topics
-      - rating
-      - finished
     sort:
       - property: finished
         direction: DESC

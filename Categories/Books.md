@@ -9,6 +9,8 @@ categories:
 
 Books read, want to read, or currently reading.
 
+![[Books.base#Reading]]
+
 ![[Books.base#Next]]
 
 
